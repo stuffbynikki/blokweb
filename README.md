@@ -130,19 +130,28 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Het opzetten van de HTML ging naar mijn mening goed. Toch wil ik checken of het semantisch klopt. Het is voor mij erg logisch welke elementen ik in de DOM moet zetten. Toch weet ik niet goed waar ik moet beginnen. Ik ben begonnen met een grid te maken van de content die op mijn website staat. Na het maken van de grid heb ik direct breakingpoints toegevoegd. Dat wanneer er een breakingpoint is, er een andere column style wordt laten zien. Na dit toegepast te hebben krijg ik weer error. Wat nu? Er is voor mij nog geen logische opbouw in het schrijven van de css. Daarnaast ben ik nog niet zeker over mijn HTML alsin of het correct is. Ik ben blij dat er nu een voortgangsgesprek is. 
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | student 1: Jordy - Jordy wil graag wat vragen over zijn carroussel, verder is hij lekker bezig. 
+  | student 2: Lars -  Lars wil weten hoe hij zijn Home pagina aanzienlijker kan maken voor de gebruiker. Hoe hij audio en video voor de gebruiker kan toevoegen aan zijn pagina. En ofpop ups in het nadeel of voordeel van zijn site werken. 
+  | student 3: Nikki - Mijn vragen zijn uitgebreid:
+  
+  Pagina 1: Podcast pagina
+  1. Is mijn HTML semantisch correct? Want dat is de basis. Als dat goed staat kan ik aan de slag. 
+  2. Hamburger menu: hoe zit dat? 
+  3. Alles wat in een article staat, moet ik dat apart stylen? 
+  4. De categorieën: hoe kan ik die beste vormgeven? Ook op de manier van de site of moet dat dan ook in een grid? En die zoekbalk ook? En hoe maak ik die zoekbalk? 
+  5. Footer: hoe kan ik footer van Kukuru namaken met name de opzet ervan. Html heb ik al. Het naast elkaar zetten is de vraag. 
 
-
+  Pagina 2: Aangeklikte podcast met Willemijn Welten
+  1. Mag de class op de body doen, vanwege andere content styling met nth-of-type? 
+  2. Hoe kan ik zo’n MP3 afspeler erin zetten? Zoals op kukuru website. 
+  3. Hoe krijg ik net als bij kukuru website de boeken naast elkaar? Positioneren? Of flexbox? Of what else ??
+ 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
