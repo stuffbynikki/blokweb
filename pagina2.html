@@ -12,13 +12,18 @@
 	<link rel="icon" type="image/svg+xml" href="images/faviconkukuru.svg">
 </head>
 
-<body class="pag2"> <!-- Hier mag een class gebruikt worden, omdat nth-of-type styling de breaking points gebruikt word voor pag1 -->
+<body> <!-- Hier mag een class gebruikt worden, omdat nth-of-type styling de breaking points gebruikt word voor pag1 -->
 
 	<header>
 
-		<img src="images/logoweb.svg" alt="logo Kukuru podcast"> <!-- Logo/naam -->
+		<a href="index.html">
+			<img src="images/logoweb.svg" alt="logo Kukuru podcast"> <!-- Logo/naam -->
+		</a>
+
+		<button aria-hidden="true"><img src="images/hamburgermenu.png" alt="Menu"/>Menu</button>
 
 		<nav>
+			<button aria-hidden="true"><img src="images/sluitmenu.png" alt="Button om hamburger menu te sluiten"/>Sluit</button>
 			<ul>
 				<li><a href="https://kukuru.nl/over-kukuru/">Over Kukuru</a></li>
 				<li><a href="index.html">Podcast</a></li>
@@ -30,9 +35,12 @@
 			</ul>
 		</nav>
 
+		<!-- Deze div wordt gebruikt om een waas te maken wanneer je een hamburgermenu aandrukt  -->
+		<div></div>
+
 	</header>
 
-    <main>
+    <main class="pag2">
 
         <article>
                 
@@ -73,12 +81,16 @@
 			</article>
 
 			    <!-- Social icons -->
-				<h1>Beluister de podcast</h1>
-				<ul>
-					<li> <a href="https://podcasts.apple.com/nl/podcast/kukuru/id1254162481"><img src="images/apple.svg" alt="Podcast beluisteren via Apple"></a> </li>
-					<li> <a href="https://open.spotify.com/show/78NNcGnMKJbfSF6NcN85Jm?si=8Fs-RuclRL-BGf_XF0qDIA&nd=1"><img src="images/spotify.svg" alt="Podcast beluisteren via Spotify"></a> </li>
-					<li> <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL2t1a3VydQ?sa=X&ved=0CAMQ4aUDahcKEwiw79Lb_6v0AhUAAAAAHQAAAAAQAQ&hl=nl"><img src="images/google.svg" alt="Podcast beluisteren via Google"></a> </li>
-				</ul>
+				<section>
+					<h2>Beluister de podcast</h>
+					<nav>
+						<ul>
+							<li> <a href="https://podcasts.apple.com/nl/podcast/kukuru/id1254162481"><img src="images/apple.svg" alt="Podcast beluisteren via Apple"></a> </li>
+							<li> <a href="https://open.spotify.com/show/78NNcGnMKJbfSF6NcN85Jm?si=8Fs-RuclRL-BGf_XF0qDIA&nd=1"><img src="images/spotify.svg" alt="Podcast beluisteren via Spotify"></a> </li>
+							<li> <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL2t1a3VydQ?sa=X&ved=0CAMQ4aUDahcKEwiw79Lb_6v0AhUAAAAAHQAAAAAQAQ&hl=nl"><img src="images/google.svg" alt="Podcast beluisteren via Google"></a> </li>
+						</ul>
+					</nav>
+				</section>
 
                 <!-- Video -->
 				<h2>Bekijk de podcast met beeld</h2>
@@ -140,36 +152,68 @@
 
     </main>
 
-</body>
+	<!-- Footer -->	
+	<footer>
 
-<!-- Footer -->	
-<footer>
-
-		<!-- Navigatie sociale media -->	
 		<section>
-			<nav>
-				<ul>
-					<li><a href="https://www.youtube.com/c/Kukuru">Bekijk via YouTube</a></li>
-					<li><a href="https://open.spotify.com/show/78NNcGnMKJbfSF6NcN85Jm?si=Ket5dKklSGmyqHv80AL7EA&nd=1">Bekijk via Spotify</a></li>
-					<li><a href="https://podcasts.apple.com/nl/podcast/kukuru/id1445446206">Beluister via Apple Podcasts</a></li>
-					<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL2t1a3VydQ==">Beluister via Google Podcasts</a></li>
-				</ul>
-			</nav>
+			<!-- Navigatie alle links -->	
+				<nav>
+					<ul>
+						<li><a href="index.html">Podcast</a></li>
+						<li><a href="https://kukuru.nl/over-kukuru/">Over Kukuru</a></li>
+						<li><a href="https://kukuru.nl/category/howto/">How-to</a></li>
+						<li><a href="https://kukuru.nl/verbinding/">Webinars</a></li>
+						<li><a href="https://kukuru.nl/boekenkast/">Boekenkast</a></li>
+						<li><a href="https://kukuru.nl/webshop/">Webshop</a></li>
+						<li><a href="https://kukuru.nl/contact/">Contact</a></li>
+					</ul>
+				</nav>
+
+			<!-- Sociale media links -->	
+				<nav>
+					<ul>
+						<li><a href="https://www.youtube.com/c/Kukuru">Bekijk via YouTube</a></li>
+						<li><a href="https://open.spotify.com/show/78NNcGnMKJbfSF6NcN85Jm?si=Ket5dKklSGmyqHv80AL7EA&nd=1">Bekijk via Spotify</a></li>
+						<li><a href="https://podcasts.apple.com/nl/podcast/kukuru/id1445446206">Beluister via Apple Podcasts</a></li>
+						<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL2t1a3VydQ==">Beluister via Google Podcasts</a></li>
+					</ul>
+				</nav>
+
+			<!-- Email vakje -->	
+			<section>
+				<h3>Schrijf je in voor de KUKURU nieuwsbrief</h3>
+
+				<!-- Naast NAME is er ook nog de VALUE. Hiermee kan je een standaard waarde geven die dan in het invulveld staat. 
+					VALUE is handig in combinatie met PHP. Het is dan handig om waarde door te geven die ingevoerd zijn. 
+					We gaan nu een invoerveld maken van hetzelfde type als daarnet, maar dan met een VALUE. 
+					De waarde zet je tussen haakjes achter VALUE. Het wordt een invoerveld om je e-mail adres in te voeren.
+					Bron: https://www.htmlschool.nl/les4.html -->
+				<form method="post" action="mailto:nikki.okker@hva.nl"><input type="text" name="email" placeholder="Je e-mailadres"></form>
+				
+				<button type="submit">Verstuur</button>
+
+			</section>
 		</section>
 
 			<!-- Social media buttons -->	
-		<section> 
-			<ul>
-				<li> <a href="https://www.facebook.com/groups/Kukuruclub"><img src="images/facebook.png" alt="Facebook"></a> </li>
-				<li> <a href="https://twitter.com/Giels"><img src="images/twitter.png" alt="Twitter"></a> </li>
-				<li> <a href="https://www.instagram.com/kukuruclub/"><img src="images/instagram.png" alt="Instagram"></a> </li>
-				<li> <a href="https://www.youtube.com/channel/UCDbqx_0w5Gyp4DbGstTuFBg"><img src="images/youtube.png"alt="YouTube"></a> </li>
-				<li> <img src="images/mail.png" action="mailto:nikki.okker@hva.nl" alt="Mailen"></li>
-			</ul>
-		</section>
+			<nav>
+				<ul>
+					<li> <a href="https://www.facebook.com/groups/Kukuruclub"><img src="images/facebook.png" alt="Facebook"></a> </li>
+					<li> <a href="https://twitter.com/Giels"><img src="images/twitter.png" alt="Twitter"></a> </li>
+					<li> <a href="https://www.instagram.com/kukuruclub/"><img src="images/instagram.png" alt="Instagram"></a> </li>
+					<li> <a href="https://www.youtube.com/channel/UCDbqx_0w5Gyp4DbGstTuFBg"><img src="images/youtube.png"alt="YouTube"></a> </li>
+					<li> <img src="images/mail.png" action="mailto:nikki.okker@hva.nl" alt="Mailen"></li>
+				</ul>
+			</nav>
 
 		<p> 2022 - KUKURU</p>
 
-</footer>
+	</footer>
+
+	<script defer src="scripts/script.js"></script>
+
+
+</body>
+
 
 </html>

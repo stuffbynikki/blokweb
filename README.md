@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Blauw
 
   #### Je focus:
-  Surface plane
+  Volledig responsive maken.
  
 </details>
 
@@ -153,12 +153,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   3. Hoe krijg ik net als bij kukuru website de boeken naast elkaar? Positioneren? Of flexbox? Of what else ??
  
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+ Vragen beantwoord op pagina 1: 
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - HTML ziet semantisch goed uit behalve sections, die articles moesten zijn. 
+  - Hamburger menu komt in volgende les.
+  - Focussen op eerst de ene website, dan de ander. 
+  - Gebruik grid voor de footer. 
 
 </details>
 
@@ -172,17 +172,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+De eerste website pagina, podcasts, ziet er goed uit. Er is nog niet in css gewerkt met de styling codes. Toch heb ik het positioneren nu aardig opgezet. Het is momenteel erg responsive wat ik vanaf het begin al wilde bereiken. Nu ben ik begonnen aan de tweede pagina van mijn site om deze qua vlakken op de juiste manier te positioneren. Dit doe ik met een class op de body, zodat ik één css bestand kan behouden. Dit vind ik een uitdaging, maar ga ik fixen, zodat het er tof uit gaat zien. Work in progress, it is!
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+| student 1: Jordy - Jordy wil graag wat vragen over een SVG inline positioneren bij een h3. 
+| student 2: Lars -  Lars wil het hebben over het maken van een goede header nav. Of je een hele footer moet maken. Over het stijlen van een formulier. En grid op foto's. 
+| student 3: Nikki - Ik wil graag focussen op het positioneren van mijn tweede pagina en daarna nog tip voor stijlen van mijn eerste pagina. En ik wil een audio player op mn site maar ik snap niet hoe dat werkt :) Dus daar ga ik ook naar vragen. Wat moet er semantisch correct beter?
 
 
   ### Verslag van meeting

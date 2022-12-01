@@ -16,9 +16,14 @@
 
 	<header>
 
-		<img src="images/logoweb.svg" alt="logo Kukuru podcast"> <!-- Logo/naam -->
+		<a href="index.html">
+			<img src="images/logoweb.svg" alt="logo Kukuru podcast"> <!-- Logo/naam -->
+		</a>
+
+		<button aria-hidden="true"><img src="images/hamburgermenu.png" alt="Menu"/>Menu</button>
 
 		<nav>
+			<button aria-hidden="true"><img src="images/sluitmenu.png" alt="Button om hamburger menu te sluiten"/>Sluit</button>
 			<ul>
 				<li><a href="https://kukuru.nl/over-kukuru/">Over Kukuru</a></li>
 				<li><a href="index.html">Podcast</a></li>
@@ -29,6 +34,9 @@
 				<li><a href="https://kukuru.nl/contact/">Contact</a></li>
 			</ul>
 		</nav>
+
+		<!-- Deze div wordt gebruikt om een waas te maken wanneer je een hamburgermenu aandrukt  -->
+		<div></div>
 
 	</header>
 
@@ -119,10 +127,23 @@
 				<a href="https://kukuru.nl/2022/08/17/zelfliefde-kukuru-3/">Bekijk</a>
 			</article>
 
+			<!-- Categorieen -->
+			<nav>
+				<form>
+					<input type="text" name="zoekbalk" placeholder="Zoeken">
+					<button>
+						<img src="images/zoekicoon.png" alt="Zoekknop">
+					</button>
+				</form>
+				<ul>
+					<li>Acceptatie</li>
+					<li>ADHD</li>
+				</ul>
+			</nav>
+
 		</section>
 
 		<!-- Navigatie -->
-		<!-- Hier klopt nog niet van! -->
 		<section>
 			<nav>
 				<ul>
@@ -136,14 +157,6 @@
 			</nav>
 		</section>
 
-		<!-- Categorieen -->
-		<!-- Hier wil ik iets anders voor bedenken -->
-		<nav>
-			<ul>
-				<li>Acceptatie</li>
-				<li>ADHD</li>
-			</ul>
-		</nav>
 
 		<!-- Grote blok 2-->
 		<h1>De populairste afleveringen</h1>
@@ -207,61 +220,50 @@
 
 	</main>
 
-	<script defer src="scripts/script.js"></script>
+	<!-- Footer -->	
+	<footer>
 
-</body>
-
-		<!-- Footer -->	
-		<footer>
-
-			<!-- Navigatie alle links -->	
 			<section>
-				<h1>Kukuru links</h1>
-				<nav>
-					<ul>
-						<li><a href="index.html">Podcast</a></li>
-						<li><a href="https://kukuru.nl/over-kukuru/">Over Kukuru</a></li>
-						<li><a href="https://kukuru.nl/category/howto/">How-to</a></li>
-						<li><a href="https://kukuru.nl/verbinding/">Webinars</a></li>
-						<li><a href="https://kukuru.nl/boekenkast/">Boekenkast</a></li>
-						<li><a href="https://kukuru.nl/webshop/">Webshop</a></li>
-						<li><a href="https://kukuru.nl/contact/">Contact</a></li>
-					</ul>
-				</nav>
+				<!-- Navigatie alle links -->	
+					<nav>
+						<ul>
+							<li><a href="index.html">Podcast</a></li>
+							<li><a href="https://kukuru.nl/over-kukuru/">Over Kukuru</a></li>
+							<li><a href="https://kukuru.nl/category/howto/">How-to</a></li>
+							<li><a href="https://kukuru.nl/verbinding/">Webinars</a></li>
+							<li><a href="https://kukuru.nl/boekenkast/">Boekenkast</a></li>
+							<li><a href="https://kukuru.nl/webshop/">Webshop</a></li>
+							<li><a href="https://kukuru.nl/contact/">Contact</a></li>
+						</ul>
+					</nav>
+
+				<!-- Sociale media links -->	
+					<nav>
+						<ul>
+							<li><a href="https://www.youtube.com/c/Kukuru">Bekijk via YouTube</a></li>
+							<li><a href="https://open.spotify.com/show/78NNcGnMKJbfSF6NcN85Jm?si=Ket5dKklSGmyqHv80AL7EA&nd=1">Bekijk via Spotify</a></li>
+							<li><a href="https://podcasts.apple.com/nl/podcast/kukuru/id1445446206">Beluister via Apple Podcasts</a></li>
+							<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL2t1a3VydQ==">Beluister via Google Podcasts</a></li>
+						</ul>
+					</nav>
+
+				<!-- Email vakje -->	
+				<section>
+					<h3>Schrijf je in voor de KUKURU nieuwsbrief</h3>
+
+					<!-- Naast NAME is er ook nog de VALUE. Hiermee kan je een standaard waarde geven die dan in het invulveld staat. 
+						VALUE is handig in combinatie met PHP. Het is dan handig om waarde door te geven die ingevoerd zijn. 
+						We gaan nu een invoerveld maken van hetzelfde type als daarnet, maar dan met een VALUE. 
+						De waarde zet je tussen haakjes achter VALUE. Het wordt een invoerveld om je e-mail adres in te voeren.
+						Bron: https://www.htmlschool.nl/les4.html -->
+					<form method="post" action="mailto:nikki.okker@hva.nl"><input type="text" name="email" placeholder="Je e-mailadres"></form>
+					
+					<button type="submit">Verstuur</button>
+
+				</section>
 			</section>
 
-			<!-- Sociale media links -->	
-			<section>
-				<h1>Kukuru ervaren</h1>
-				<nav>
-					<ul>
-						<li><a href="https://www.youtube.com/c/Kukuru">Bekijk via YouTube</a></li>
-						<li><a href="https://open.spotify.com/show/78NNcGnMKJbfSF6NcN85Jm?si=Ket5dKklSGmyqHv80AL7EA&nd=1">Bekijk via Spotify</a></li>
-						<li><a href="https://podcasts.apple.com/nl/podcast/kukuru/id1445446206">Beluister via Apple Podcasts</a></li>
-						<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL2t1a3VydQ==">Beluister via Google Podcasts</a></li>
-					</ul>
-				</nav>
-			</section>
-
-			<!-- Email vakje -->	
-			<section>
-				<h1>Kukuru nieuwsbrief</h1>
-				<h3>Schrijf je in voor de KUKURU nieuwsbrief</h3>
-
-				<!-- Naast NAME is er ook nog de VALUE. Hiermee kan je een standaard waarde geven die dan in het invulveld staat. 
-					VALUE is handig in combinatie met PHP. Het is dan handig om waarde door te geven die ingevoerd zijn. 
-					We gaan nu een invoerveld maken van hetzelfde type als daarnet, maar dan met een VALUE. 
-					De waarde zet je tussen haakjes achter VALUE. Het wordt een invoerveld om je e-mail adres in te voeren.
-					Bron: https://www.htmlschool.nl/les4.html -->
-				<form method="post" action="mailto:nikki.okker@hva.nl"><input type="text" name="email" value="Je e-mailadres"></form>
-				
-				<button type="submit">Verstuur</button>
-
-			</section>
-
-			<!-- Social media buttons -->	
-			<section> 
-				<h1>Volg Kukuru</h1>
+				<!-- Social media buttons -->	
 				<nav>
 					<ul>
 						<li> <a href="https://www.facebook.com/groups/Kukuruclub"><img src="images/facebook.png" alt="Facebook"></a> </li>
@@ -271,10 +273,15 @@
 						<li> <img src="images/mail.png" action="mailto:nikki.okker@hva.nl" alt="Mailen"></li>
 					</ul>
 				</nav>
-			</section>
 
 			<p> 2022 - KUKURU</p>
 
-		</footer>
+	</footer>
+
+	<script defer src="scripts/script.js"></script>
+
+</body>
+
+
 	
 </html>
