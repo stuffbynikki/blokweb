@@ -163,9 +163,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 </details>
 
 
-
-
-
 ## Voortgang 2 (week 3)
 
 <details>
@@ -183,16 +180,11 @@ De eerste website pagina, podcasts, ziet er goed uit. Er is nog niet in css gewe
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
-
-</details>
-
-
-
-
+  - De juiste selectoren kiezen.
+  -  Geleerd een parent een bepaalde width te geven en daarin images te positioneren dat het niet groter (max-width) kan worden. 
+  - Geluid voor beginners - Marquee (scrollende tekst), 
+  - Kleuren in de root zetten en gebruiken in css. 
+</details> 
 
 ## Toegankelijkheidstest 2/2 (week 4)
 
