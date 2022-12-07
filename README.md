@@ -195,32 +195,58 @@ De eerste website pagina, podcasts, ziet er goed uit. Er is nog niet in css gewe
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Eerste pagina: 
+  - Je begint bij het logo linksboven in het menu met een goede alt-tekst. De screenreader leest goed voor wat het logo is (met alt tekst) en wat voor content de lijst ernaast heeft —> Hierna gaat hij naar de lijst van de eerste nav —> De eerste kop wordt voorgelezen —> dan gaat de screenreader verder naar de artikelen in het grid, waar elk element goed wordt voorgelezen met alt tekst indien dit van toepassing is. Het is ook duidelijk wat een knop en wat een link is en dat daar een icoon in zit, alleen is niet duidelijk wat voor icoon dit is. Hij zegt alleen ‘icoon’, en niks anders.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  - In de lijst onderaan de eerste sectie (het eerste grid) heb je die pagina navigatie waarin het vierde punt ‘…’ is, en ook zo wordt opgelezen. Is hier een andere optie voor? Verder moet je nog in je button een aria-label zetten.
 
+  Tweede pagina:
+  - In je artikel heb je een link uitgetypt. Dit leest de screenreader voor als https://bit.ly/KaartendeckManifesteren… etc. Dit duurt echt superlang en is niet te doen: verbeterpunt!!!! 
+  - In je podcast heb je een play-knop en een geluidknop. De playknop wordt voorgelezen als knop, maar de geluid knop als afbeelding. Dit hoort niet. Verbeterpunt!!!!
+
+  Puntjes van aandacht: 
+  1. Alle afbeeldingen checken op ALT tekst.
+  2. Knop aria labels geven. 
+  3. Icoon nog een naam geven. 
+  4. links voorlezen (Link als tekst zetten en 'a' eromheen)
+  5. Play knop een andere naam geven (aria label)
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Eerste pagina (index)
+  Heel nice hoe je al je muis ziet veranderen als je hovert en zo een distinctie tussen verschillende elementen hebt. De tabs, wanneer je met je toetsenbord navigeert, beginnen alleen bij de eerste 'Bekijk'-knop in je <main>, maar wat als iemand door de bovenste nav wil navigeren? Daar kan je even naar kijken. Daarnaast wordt op de originele site de foto groter als je hovert en is een heel vak een link, dat kan je verwerken om het makkelijker te maken om op één onderdeel te klikken. Qua tekst die groter en roze wordt. Je hebt een goede hiërarchie wat kleuren betreft, dat is te zien bij elke knop en header bij kleurenblindheid. Klikken gaat goed en soepel.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Tweede pagina (podcast)
+  Ik kan niet met mijn toetsenbord door je pagina navigeren, alsof er nergens op deze pagina een link is (die zijn er wel). Je hebt nog geen states weet ik, dus als iemand geen kleuren ziet is er nog geen manier om te zien waar je staat op de pagina. Wel is het contrast mooi hoog en scherp, waardoor met elke mogelijke kleurenblindheid wel te zien is welk element wat is.
 
+  Puntjes van aandacht: 
+  1. De screenreader starten bij het begin (ligt maar net aan waar je met je muis in de pagina staat).
+  2. Hele afbeeldingen op pagina 1 een link geven, zodat je daar ook op kunt klikken.
+  3. States toevoegen aan site.
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Visueel: met Combined Loss Diabetic Eye Disease is het moeilijk om de witte koppen te lezen. Met Periphal Field Loss is alles vaag en moet ik heel goed kijken, alles is vaag en ik moet dichterbij kijken om van alles te lezen.
+  
+  Concentratieproblemen: Omdat je alleen de knop klikbaar heb gemaakt is het lastig om goed te klikken terwijl je afgeleid bent. Je kan beter de hele sectie klikbaar maken.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Motoriek: gaat priem. Vanuit mn eigen slechte perspectief. Peace. 
+  Beperking: gaat lastig, maar is wel bestuurbaar. 
 
+  Puntjes van aandacht: 
+  1. Witte koppen iets verzinnen? Als extra's. 
+  2. Hele afbeeldingen op pagina 1 een link geven, zodat je daar ook op kunt klikken.
 
-  #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+#### Visueel (brillen, contrast, kleurenblind, dark/light). 
+Eerste pagina (index)
+Qua tekst die groter en roze wordt. Je hebt een goede hiërarchie wat kleuren betreft, dat is te zien bij elke knop en header bij kleurenblindheid.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+Tweede pagina (podcast)
+Het contrast is mooi hoog en scherp, waardoor met elke mogelijke kleurenblindheid wel te zien is welk element wat is.
+
+  Puntjes van aandacht: 
+  1. Animatie toevoegen.
+  2. States toevoegen.
 
 </details>
-
-
-
 
 
 ## Voortgang 3 (week 4)
