@@ -8,141 +8,25 @@
 main h1 {
 	text-align: center;
 	font-size: 3em;
-	margin-top: 1em;
+	margin-top: 2em;
 }
 
 main {
 padding: 0em;
 }
 
+
+/* hele lijst articles met navs */
 main section:nth-of-type(1) {
 	padding:1em;
-}
-
-main section:nth-of-type(2) ul {
-	display:flex;
-	justify-content: center;
-	list-style:none;
-	gap: 1.5em;
-    font-size:1em;
-}
-
-main section:nth-of-type(2) ul a {
- text-decoration: none;
- color:var(--categorieen-color);
-}
-
-main section:nth-of-type(2) ul li a:first-of-type {
-	text-decoration: none;
-	color:var(--categorieen-color);
-   }
-
-main section:nth-of-type(3) section {
-	padding-bottom:4em;
-}		
-
-main section:nth-of-type(3) article {
-	border-radius: 0em;
-}		
-
-/* Zoekbalk */
-main form {
-	display:initial;
-	position:relative;
-	z-index: -1;
-	flex-shrink: 0; /* Dit zorgt ervoor dat alles op z'n plek blijft, in plaats van in elkaar */
-}
-
-main form button {
-	position: absolute;
-	right:1em;
-	top:50%;
-	transform: translateY(-50%);
-	background-color: rgba(255, 255, 255, 0);
-	border: none;
-}
-
-main input[type="text"] {
-	padding: 2em;
-	border:0.1em solid black;
-	border-radius: 20em;
-
-	width:70%;
-}
-
-/* Media query's */ 
-/* Default: 1 column */ 
-@media (max-width:50em) {
-	main section:nth-of-type(1) {
-		display:grid; 
-		grid-template-columns:1fr;
-		gap:1.5em;
-	}
-
-	main section:nth-of-type(3) section {
-		display:grid; 
-		grid-template-columns:1fr ;
-		gap:1.5em;
-	}
-
-	main form input[type="text"] {
-		padding: 2em;
-		border: 0.1em solid black;
-		border-radius: 20em;
-		width: 100%;
-	}
-}
-
-/* Breakpoint 1: 2 columns */ 
-@media (min-width:50em) {
-	main section:nth-of-type(1) {
-		display:grid; 
-		grid-template-columns:1fr 1fr ;
-		gap:1.5em;
-	}
-
-	main section:nth-of-type(3) section {
-		display:grid; 
-		grid-template-columns:1fr 1fr ;
-		gap:1.5em;
-	}
-
-	main form input[type="text"] {
-		padding: 2em;
-		border: 0.1em solid black;
-		border-radius: 20em;
-		width: 100%;
-	}
-}
-
-/* Breakpoint 2: 3 columns */ 
-@media (min-width:85em) {
-	/* main */
-	main section:nth-of-type(1) {
-		display:grid; 
-		grid-template-columns: repeat(4,1fr);
-		gap:1.5em;
-		padding-right: 10em;
-		padding-left: 10em;
-	}
-
-	main section:nth-of-type(1) nav {
-		grid-row-start: 1;
-		grid-row-end: 5;
-		grid-column: 4;
-	}
-
-	main section:nth-of-type(3) section {
-		display:grid; 
-		grid-template-columns:1fr 1fr 1fr;
-		gap:1.5em;
-	}
+	display:grid;
+	gap:1.5em;
 }
 
 /************* Articles *************/ 
 
 /* Blogberichten kaders */ 
-article {
+main section:nth-of-type(1) article {
 	padding-bottom:1em;
 	background-color:var(--background-color-article);
 	border-radius: 1em;
@@ -150,7 +34,7 @@ article {
 }
 
 /* Buttons in blog berichten */ 
-article a {
+main section:nth-of-type(1) article a {
 	display: flex;
 	align-items: center;
 	gap:0.7em;		
@@ -169,46 +53,218 @@ article a {
 }
 
 /* Kopjes in blogpost */ 
-article h2 {
+main section:nth-of-type(1) article h2 {
 	padding-left: 1em;
 	padding-right: 1em;
 }
 
 /* Tekst in blogpost */ 
-article p {
+main section:nth-of-type(1) article p {
 	padding-left: 1em;
 	padding-right: 1em;
 	color:rgb(105, 104, 104);
 }
 
-/************* Nav van categorieën *************/ 
-main nav h2 {
+/* filter met zoekbalk */
+main section:nth-of-type(1) nav:nth-of-type(1) {
+	order:100;
+}
+
+main section:nth-of-type(1) nav:nth-of-type(1) h2 {
 	font-family: "Amaranth", Arial, Helvetica, sans-serif;
 	color: var(--categorieen-color);
 	font-size: 1.5em;
 }
 
-main nav ul {
+/* Zoekbalk */
+main section:nth-of-type(1) nav:nth-of-type(1) form {
+	display:initial;
+	position:relative;
+	z-index: -1;
+	flex-shrink: 0; /* Dit zorgt ervoor dat alles op z'n plek blijft, in plaats van in elkaar */
+}
+
+main section:nth-of-type(1) nav:nth-of-type(1) form button {
+	position: absolute;
+	right:1em;
+	top:50%;
+	transform: translateY(-50%);
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+}
+
+main section:nth-of-type(1) nav:nth-of-type(1) input[type="search"] {
+	padding: 2em;
+	border:0.1em solid black;
+	border-radius: 20em;
+
+	width:100%;
+}
+
+/************* filter van categorieën *************/ 
+
+
+main section:nth-of-type(1) nav:nth-of-type(1) ul {
 	padding-left:1em;
 }
 
-main nav ul li {
+main section:nth-of-type(1) nav:nth-of-type(1) ul li {
 	font-family: "Roboto regular", Arial, Helvetica, sans-serif;
 	color: var(--categorieen-color);
 	margin-bottom:1em;
 }
 
-li::marker {
+main section:nth-of-type(1) nav:nth-of-type(1) ul li::marker {
 	color:rgb(87, 87, 87);
 }
+
+
+
+
+/* paginering */
+
+main section:nth-of-type(1) nav:nth-of-type(2) {
+	grid-column-start:1;
+	grid-column-end: -1;
+}
+
+main section:nth-of-type(1) nav:nth-of-type(2) ul {
+	display:flex;
+	justify-content: center;
+	list-style:none;
+	gap: 1.5em;
+    font-size:1em;
+}
+
+main section:nth-of-type(1) nav:nth-of-type(2) ul a {
+ text-decoration: none;
+ color:var(--categorieen-color);
+}
+
+main section:nth-of-type(1) nav:nth-of-type(2) ul a:first-of-type {
+	text-decoration: none;
+	color:var(--categorieen-color);
+}
+
+
+
+
+/* Breakpoint 1: 2 columns */ 
+@media (min-width:50em) {
+	main section:nth-of-type(1) {
+		grid-template-columns:1fr 1fr ;
+	}
+}
+
+/* Breakpoint 2: 3 columns */ 
+@media (min-width:85em) {
+	/* main */
+	main section:nth-of-type(1) {
+		grid-template-columns: repeat(4,1fr);
+		padding-right: 10em;
+		padding-left: 10em;
+	}
+
+	main section:nth-of-type(1) nav:nth-of-type(1) {
+		grid-row-start: 1;
+		grid-row-end: 6;
+		grid-column: 4;
+	}
+}
+
+
+
+
+
+
+
+
+
+/* pagimnering oud - mag weg  */
+
+/* main section:nth-of-type(2) ul {
+	display:flex;
+	justify-content: center;
+	list-style:none;
+	gap: 1.5em;
+    font-size:1em;
+}
+
+main section:nth-of-type(2) ul a {
+ text-decoration: none;
+ color:var(--categorieen-color);
+}
+
+main section:nth-of-type(2) ul li a:first-of-type {
+	text-decoration: none;
+	color:var(--categorieen-color);
+   } */
+
+
+
+
+
 	
-/************* 2de - section *************/ 
-main section:nth-of-type(3) {
+/************* 2de - section  nu 2 *************/ 
+
+
+/* hoort bij section 2 - nu section 2 */
+
+
+main section:nth-of-type(2) section {
+	padding-bottom:4em;
+}		
+
+main section:nth-of-type(2) article {
+	border-radius: 0em;
+}		
+
+
+
+main section:nth-of-type(2) {
 	color:white;
 	padding:1em;
 	background-color: var(--background-blok2);
 }
 
-main section:nth-of-type(3) h1 {
+main section:nth-of-type(2) h1 {
 	color:white;
+}
+
+/* Media query's */ 
+/* Default: 1 column */ 
+@media (max-width:50em) {
+
+
+	main section:nth-of-type(2) section {
+		display:grid; 
+		grid-template-columns:1fr ;
+		gap:1.5em;
+	}
+
+}
+
+@media (min-width:50em) {
+	main section:nth-of-type(2) section {
+		display:grid; 
+		grid-template-columns:1fr 1fr ;
+		gap:1.5em;
+	}
+}
+
+@media (min-width:85em) {
+
+	main section:nth-of-type(1) nav:nth-of-type(1) form {
+		display:initial;
+		position:relative;
+		z-index: 0;
+		flex-shrink: 0; /* Dit zorgt ervoor dat alles op z'n plek blijft, in plaats van in elkaar */
+	}
+
+	main section:nth-of-type(2) section {
+		display:grid; 
+		grid-template-columns:1fr 1fr 1fr;
+		gap:1.5em;
+	}
+	
 }
