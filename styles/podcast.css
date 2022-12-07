@@ -1,0 +1,193 @@
+/****************/ /* Main */ /****************/
+main {
+	/* margin:1em; */
+	padding:1em; 
+}
+
+/* 1e section  */
+main section:nth-of-type(1) h1 {
+	text-align: center;
+}
+
+main section:nth-of-type(1) > p:nth-of-type(1) {
+	text-align: center;
+}
+
+/* 2e section  */
+main section:nth-of-type(2) ul {
+	display: flex;
+	gap:1.5em;
+	padding-left:0em;
+	list-style: none;
+ }
+
+main section:nth-of-type(2) ul li {
+	width: 2em;
+}
+
+main section:nth-of-type(2) ul li img {
+	width: 100%;
+}
+
+/* player */
+main section:nth-of-type(2) section {
+	display:grid;
+	grid-template-columns:4em 1fr max-content;
+	gap:.5em;
+}
+
+main section:nth-of-type(2) section h3 {
+	grid-column-start: 2;
+	grid-row-start:1;
+}
+
+/* logo */
+main section:nth-of-type(2) section img:nth-of-type(1) {
+	grid-column-start: 3;
+	grid-row-start:1;
+}
+
+/* willemijn */
+main section:nth-of-type(2) section img:nth-of-type(2) {
+	grid-column-start: 1;
+	grid-row-start:1;
+	grid-row-end:3;
+	width:100%;
+}
+
+/* scrolling text */
+main section:nth-of-type(2) section marquee {
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start:2;
+}
+
+/* button */
+main section:nth-of-type(2) section button {
+	grid-column-start: 1;
+	grid-row-start:3;
+}
+
+/* audio */
+main section:nth-of-type(2) section audio {
+	display:none;
+}
+
+/* audio img */
+main section:nth-of-type(2) section img:nth-of-type(3) {
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start:3;
+}
+
+@media (min-width:50em) {
+	main section:nth-of-type(2) section {
+		grid-template-columns:10em max-content 1fr max-content;
+	}
+
+	main section:nth-of-type(2) section h3 {
+		/* grid-column-start: 2; */
+		grid-column-end: 4;
+		/* grid-row-start:1; */
+	}
+
+	/* logo */
+	main section:nth-of-type(2) section img:nth-of-type(1) {
+		grid-column-start: 4;
+		/* grid-row-start:1; */
+	}
+
+	/* willemijn */
+	main section:nth-of-type(2) section img:nth-of-type(2) {
+		/* grid-column-start: 1; */
+		/* grid-row-start:1; */
+		grid-row-end:4;
+		/* width:100%; */
+	}
+	/* scrolling text */
+	main section:nth-of-type(2) section marquee {
+		/* grid-column-start: 2; */
+		grid-column-end: 5;
+		/* grid-row-start:2; */
+	}
+
+	/* button */
+	main section:nth-of-type(2) section button {
+		grid-column-start: 2;
+		/* grid-row-start:3; */
+	}
+	
+	/* audio img */
+	main section:nth-of-type(2) section img:nth-of-type(3) {
+		grid-column-start: 3;
+		grid-column-end: 5;
+		/* grid-row-start:3; */
+	}
+}
+
+
+/* 1e aside - lijstje boeken */
+main aside:nth-of-type(1) ul {
+	list-style: none;
+	margin:0;
+	padding:0;
+
+	display:grid;
+	gap:1em;
+}
+
+main aside:nth-of-type(1) ul li {
+	display: flex;
+	gap: 1em;
+}
+
+main aside:nth-of-type(1) ul li > a {
+	order:-100;
+}
+
+main section:nth-of-type(4) ul{
+	display: flex;
+	gap:1em;
+	padding-left:0em;
+	list-style: none;
+}
+
+main section:nth-of-type(4) ul li {
+	width: 3em;
+}
+
+main section:nth-of-type(4) ul li img {
+	width: 100%;
+}
+
+/* 2de aside */
+main aside:nth-of-type(2) h2 {
+	position: absolute;
+	clip: rect(0 0 0 0);
+}
+
+/****************/ /* Media query's */ /****************/
+
+/* Default: 1 column */ 
+@media (max-width:50em) {
+	iframe {
+		width: 19.5em;
+		height: 11em;
+	}
+}
+
+/* Breakpoint 1: 2 columns */ 
+@media (min-width:50em) {
+	iframe {
+		width: 48em;
+		height: 28em;
+	}
+}
+
+/* Breakpoint 2: 3 columns */ 
+@media (min-width:85em) {
+	iframe {
+		width: 83em;
+		height: 45em;
+	}
+}

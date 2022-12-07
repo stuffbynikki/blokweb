@@ -1,4 +1,3 @@
-
 /****************/ /* Hamburger menu */ /****************/
 
 // stap 1: zoek de menu-button op en sla die op in een variabele
@@ -18,3 +17,12 @@ function toggleMenu() {
   deWaas.classList.toggle("open");
 }
 
+/****************/ /* Button Mp3 afspeler */ /****************/
+var playButton = document.querySelector(".mp3button");
+var sound = document.querySelector("audio");
+
+playButton.addEventListener("click", playSound);
+
+function playSound() {
+	sound.play();
+}

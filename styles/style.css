@@ -13,32 +13,59 @@ button, summary {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-	--color-border-search:black; 
+/* header > nav */
+	--color-text-nav-open:rgb(158,22,131);
+	--color-text-nav-sluit:rgb(255, 255, 255);
+	--button-kleur:#ff49dc;
+	--color-background-nav:rgb(255, 255, 255);
+	--background-color-article: rgb(237,237,237);
+	--datum-color:rgb(122,122,122);
+	--shaduw-nav:rgb(102 102 102 /.5);
+	--h1-color:rgb(158,22,131);
+	--h2-color:rgb(62,62,62);
+	--footer-background:rgb(46,46,46);
+	--color-footer:rgb(183, 182, 182);
+	--color-footer2:rgb(243, 243, 243);
 }
 
-/****************/
-/* JOUW STYLING */
-/****************/
+body {
+	margin:0;
+}
+
+
+/**********/
+/* HEADER */
+/**********/
 
 /****************/ /* Header */ /****************/
 header {
 	display:flex;
 	top:0;
 	position:sticky;
-
+	padding:1em;
 	justify-content: space-between;
+
+	background:var(--color-background-nav);
 }
 
 header img {
-	width: 100%;
-	max-width:10em;
+	width:100%;
+	max-width:11em;
 }
 
 /****************/ /* Header > Nav */ /****************/
 header > button {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	background-color:var(--button-kleur);
+	padding:1em;
+	border-radius: 0.3em;
+	text-decoration: none;
+	max-width:8em;
+	color:var(--color-text-nav-sluit);
+	text-transform: uppercase;
+	font-weight: bold;
 	order:100;
   }
 
@@ -58,14 +85,19 @@ header button img {
   }
 
 header ul {
-	list-style: none;
-	justify-self: end;
-	text-align: right;
+	list-style:none;
+	justify-self:end;
+	text-align:right;
+}
+
+header li {
+	padding-bottom: 1em;
 }
 
 header a {
-	color:white;
+	color:var(--color-text-nav-open);
 	text-decoration:none;
+
 }
 
 /****************/ /* Nav */ /****************/
@@ -75,9 +107,9 @@ header nav {
 	
 	display:grid;
 	align-content:start;
-	gap:2em;
+	gap:1.5em;
 	
-	background-color:blue;
+	background-color:var(--color-background-nav);
 	
 	/* Zeggen dat het vlak van het menu het hele scherm in neemt */
 	position:fixed;
@@ -97,6 +129,14 @@ header nav {
 
 header nav button {
 	justify-self:end;
+
+	background-color:var(--button-kleur);
+	border-radius: 0.3em;
+	text-decoration: none;
+	max-width:8em;
+	color:var(--color-text-nav-sluit);
+	text-transform: uppercase;
+	font-weight: bold;
    }
 
 header nav.open {
@@ -108,7 +148,7 @@ header nav.open {
 header div {
 	position: fixed;
 	inset:0;
-	background-color:rgb(102 102 102 /.5);
+	background-color:var(--shaduw-nav);
 	  
 	opacity:0;
 	
@@ -124,79 +164,120 @@ header div.open {
 }
 
 
-/****************/ /* Main */ /****************/
-main h1 {
-	text-align: center;
+/* Breakpoint 2: 3 columns */ 
+@media (min-width:85em) {
+
+	/* header */
+	header {
+		padding:0;
+		top:0;
+		position:sticky;
+		justify-content: space-between;
+		align-items: center; 
+	}
+
+	header nav {
+		position:relative;
+		background-color: transparent;
+		transform: translateX(0);
+		padding: 0em 11em;
+	}
+
+	header img {
+		position: absolute;
+		top: 0.6em;
+		left: 10em;
+
+		width:100%;
+		max-width:17em;
+	}
+
+	header button {
+		display:none;
+	}
+
+	header li {
+		padding-bottom: 0em;
+	}
+
+	header ul {
+		display: flex;
+		gap: 2.5em;
+		list-style: none;
+	}
+
+	header nav ul li a {
+		font-weight: bold;
+	}
+
 }
 
-main section:nth-of-type(2) ul {
-	display:flex;
-	justify-content: center;
-	list-style:none;
-	gap: 0.5em;
+/**********/
+/* H1 / h2 / h3 / h4  */
+/**********/
+h1 {
+	font-family: "Amaranth", Arial, Helvetica, sans-serif;
+	font-size: 2em;
+	color:var(--h1-color);
 }
 
-/****************/ /* Main - Pagina 2 */ /****************/
-.pag2 {
-	margin: 1em;
-	padding: 1em; 
- }
-
-.pag2 article > p:nth-of-type(1) {
-	text-align: center;
+h2 {
+	font-family: "Roboto bold", Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+	color:var(--h2-color);
 }
 
-.pag2 section:first-of-type ul{
-	display: flex;
-	gap:1em;
-	list-style: none;
- }
-
-.pag2 section:nth-of-type(1) {
-	display:block;
+/**********/
+/* P-tekst */
+/**********/
+p {
+	font-family: "Roboto regular", Arial, Helvetica, sans-serif;
 }
 
-.pag2 section:nth-of-type(3) {
-	display:block;
+article > p:nth-of-type(1) {
+	color:var(--datum-color);
+	font-weight:600;
+
 }
 
-
-/****************/ /* Zoekbalk */ /****************/
-main form {
-	display:initial;
-	position:relative;
-	z-index: -1;
-	flex-shrink: 0; /* Dit zorgt ervoor dat alles op z'n plek blijft, in plaats van in elkaar */
+/**********/
+/* Linkjes */
+/**********/
+a {
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-main form button {
-	position: absolute;
-	right:1em;
-	top:50%;
-	transform: translateY(-50%);
-	background-color: rgba(255, 255, 255, 0);
-	border: none;
-}
-
-main input[type="text"] {
-	padding: 2em;
-	border:0.1em solid black;
-	border-radius: 20em;
-
-	width:70%;
-}
-
+/**********/
+/* FOOTER */
+/**********/
 
 /****************/ /* Footer */ /****************/
+
+footer {
+	background-color:var(--footer-background);
+	padding: 2em;
+}
+
+footer section {
+	padding-left: 9em;
+	padding-right:4em;
+}
+
 footer > nav ul {
 	display:flex;
 	list-style:none;
 	justify-content: center;
 	text-decoration: none;
-	}
+	gap:1em;
+}
 
 footer nav ul {
 	list-style: none;
+	padding-left: 0;
+}
+
+footer nav  ul li {
+	padding-bottom: 1em;
 }
 
 footer img {
@@ -205,102 +286,35 @@ footer img {
 	}
 
 footer p {
+	color:var(--color-footer);
 	text-align: center;
 }
 
-
-
-/****************/ /* Media query's */ /****************/
-
-/* Default: 1 column */ 
-@media (max-width:50em) {
-
-	main section:nth-of-type(1) {
-		display:grid; 
-		grid-template-columns:1fr;
-		gap:1.5em;
-	}
-
-	main section:nth-of-type(3) {
-		display:grid; 
-		grid-template-columns:1fr ;
-		gap:1.5em;
-	}
-
+footer a{
+	color:var(--color-footer);
+	text-decoration: none;
 }
 
-/* Breakpoint 1: 2 columns */ 
-@media (min-width:50em) {
-
-	main section:nth-of-type(1) {
-		display:grid; 
-		grid-template-columns:1fr 1fr ;
-		gap:1.5em;
-	}
-
-	main section:nth-of-type(3) {
-		display:grid; 
-		grid-template-columns:1fr 1fr ;
-		gap:1.5em;
-	}
-
+footer button {
+	background-color:var(--button-kleur);
+	padding:1em;
+	border-radius: 0.3em;
+	text-decoration: none;
+	max-width:8em;
+	color:var(--color-text-nav-sluit);
+	text-transform: uppercase;
+	font-weight: bold;
+	border:none;
 }
 
-/* Breakpoint 2: 3 columns */ 
-@media (min-width:85em) {
-
-	/* header */
-	header {
-		top:0;
-		position:sticky;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	header nav {
-		position:relative;
-		background-color: transparent;
-		transform: translateX(0);
-	}
-
-	header button {
-	display:none;
-	}
-
-	header ul {
-		display: flex;
-		gap: 1em;
-		list-style: none;
-	}
-	
-	header a {
-		color:rgb(0, 0, 0);
-		text-decoration:none;
-	}
- 
-	/* main */
-	main section:nth-of-type(1) {
-		display:grid; 
-		grid-template-columns: repeat(4,1fr);
-		gap:1.5em;
-	}
-
-	main section:nth-of-type(1) nav {
-		grid-row-start: 1;
-		grid-row-end: 5;
-		grid-column: 4;
-	}
-
-	main section:nth-of-type(3) {
-		display:grid; 
-		grid-template-columns:1fr 1fr 1fr;
-		gap:1.5em;
-	}
-
-}
 
 /* Breakpoint: footer */ 
 @media (max-width:45em) {
+
+	footer section {
+		padding-left: 0em;
+		padding-right: 0em;
+	}
 
 	footer > section > nav:nth-of-type(1) {
 		display:none;
@@ -310,22 +324,33 @@ footer p {
 		text-align: center;
 	}
 
-	footer > section > section {
+	footer section > section {
 		display:none;
 	}
 
 }
 
 @media (min-width:45em) {
+
 	footer > section {
 		display:grid; 
-		grid-template-columns:1fr 3fr 1fr;
+		grid-template-columns:1fr 1fr 3fr;
 		gap:1em;
 		text-align: left;
 	}
 
- 	footer > section > section {
+ 	footer section > section {
+		font-family: "Amaranth", Arial, Helvetica, sans-serif;
+		font-size: 1.3em;
+		color:var(--color-footer2);
 		text-align:right;
 	}
 
+	footer section > section form {
+		padding-bottom: 1em;
+	}
+
+	footer input[type="text"] {
+		padding:1em;
+	}
 }

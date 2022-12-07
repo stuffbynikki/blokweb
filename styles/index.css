@@ -1,0 +1,214 @@
+/* Root */
+:root {
+	--background-color-article: rgb(237,237,237);
+	--categorieen-color:rgb(158, 56, 138);
+	--background-blok2:rgb(158,22,131);}
+
+/****************/ /* Main */ /****************/
+main h1 {
+	text-align: center;
+	font-size: 3em;
+	margin-top: 1em;
+}
+
+main {
+padding: 0em;
+}
+
+main section:nth-of-type(1) {
+	padding:1em;
+}
+
+main section:nth-of-type(2) ul {
+	display:flex;
+	justify-content: center;
+	list-style:none;
+	gap: 1.5em;
+    font-size:1em;
+}
+
+main section:nth-of-type(2) ul a {
+ text-decoration: none;
+ color:var(--categorieen-color);
+}
+
+main section:nth-of-type(2) ul li a:first-of-type {
+	text-decoration: none;
+	color:var(--categorieen-color);
+   }
+
+main section:nth-of-type(3) section {
+	padding-bottom:4em;
+}		
+
+main section:nth-of-type(3) article {
+	border-radius: 0em;
+}		
+
+/* Zoekbalk */
+main form {
+	display:initial;
+	position:relative;
+	z-index: -1;
+	flex-shrink: 0; /* Dit zorgt ervoor dat alles op z'n plek blijft, in plaats van in elkaar */
+}
+
+main form button {
+	position: absolute;
+	right:1em;
+	top:50%;
+	transform: translateY(-50%);
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+}
+
+main input[type="text"] {
+	padding: 2em;
+	border:0.1em solid black;
+	border-radius: 20em;
+
+	width:70%;
+}
+
+/* Media query's */ 
+/* Default: 1 column */ 
+@media (max-width:50em) {
+	main section:nth-of-type(1) {
+		display:grid; 
+		grid-template-columns:1fr;
+		gap:1.5em;
+	}
+
+	main section:nth-of-type(3) section {
+		display:grid; 
+		grid-template-columns:1fr ;
+		gap:1.5em;
+	}
+
+	main form input[type="text"] {
+		padding: 2em;
+		border: 0.1em solid black;
+		border-radius: 20em;
+		width: 100%;
+	}
+}
+
+/* Breakpoint 1: 2 columns */ 
+@media (min-width:50em) {
+	main section:nth-of-type(1) {
+		display:grid; 
+		grid-template-columns:1fr 1fr ;
+		gap:1.5em;
+	}
+
+	main section:nth-of-type(3) section {
+		display:grid; 
+		grid-template-columns:1fr 1fr ;
+		gap:1.5em;
+	}
+
+	main form input[type="text"] {
+		padding: 2em;
+		border: 0.1em solid black;
+		border-radius: 20em;
+		width: 100%;
+	}
+}
+
+/* Breakpoint 2: 3 columns */ 
+@media (min-width:85em) {
+	/* main */
+	main section:nth-of-type(1) {
+		display:grid; 
+		grid-template-columns: repeat(4,1fr);
+		gap:1.5em;
+		padding-right: 10em;
+		padding-left: 10em;
+	}
+
+	main section:nth-of-type(1) nav {
+		grid-row-start: 1;
+		grid-row-end: 5;
+		grid-column: 4;
+	}
+
+	main section:nth-of-type(3) section {
+		display:grid; 
+		grid-template-columns:1fr 1fr 1fr;
+		gap:1.5em;
+	}
+}
+
+/************* Articles *************/ 
+
+/* Blogberichten kaders */ 
+article {
+	padding-bottom:1em;
+	background-color:var(--background-color-article);
+	border-radius: 1em;
+	box-shadow: 0em 0em 0.5em rgb(163, 162, 162);
+}
+
+/* Buttons in blog berichten */ 
+article a {
+	display: flex;
+	align-items: center;
+	gap:0.7em;		
+
+	background-color: #ff49dc;
+	padding:0.8em;
+
+	border-radius:0.3em;
+	text-decoration: none;
+
+	max-width:7em;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-left:1em;
+}
+
+/* Kopjes in blogpost */ 
+article h2 {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+/* Tekst in blogpost */ 
+article p {
+	padding-left: 1em;
+	padding-right: 1em;
+	color:rgb(105, 104, 104);
+}
+
+/************* Nav van categorieën *************/ 
+main nav h2 {
+	font-family: "Amaranth", Arial, Helvetica, sans-serif;
+	color: var(--categorieen-color);
+	font-size: 1.5em;
+}
+
+main nav ul {
+	padding-left:1em;
+}
+
+main nav ul li {
+	font-family: "Roboto regular", Arial, Helvetica, sans-serif;
+	color: var(--categorieen-color);
+	margin-bottom:1em;
+}
+
+li::marker {
+	color:rgb(87, 87, 87);
+}
+	
+/************* 2de - section *************/ 
+main section:nth-of-type(3) {
+	color:white;
+	padding:1em;
+	background-color: var(--background-blok2);
+}
+
+main section:nth-of-type(3) h1 {
+	color:white;
+}
