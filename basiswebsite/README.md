@@ -3,7 +3,6 @@
 ## Jij
 
 <details open>
-  <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
   Nikki Okker
@@ -19,7 +18,6 @@
 ## Je website
 
 <details open>
-  <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
   https://kukuru.nl/
@@ -38,7 +36,6 @@
 ## Toegankelijkheidstest 1/2 (week 1)
 
 <details>
-  <summary>uitwerken na test in de eerste werkgroep</summary>
 
   ### Bevindingen van Kukuru test
   Lijst met je bevindingen die in de test naar voren kwamen:
@@ -73,7 +70,6 @@
   4. Bevinding 4: Beluister podcast met YouTube kan niet met screenreader. 
   5. Bevinding 5: Er is een boekenkopje dat mist voor het vinden van de boeken die Willemijn het leukste vind. 
   6. Bevinding 6: Banner link Storytel x Kukuru zou je betere alt-tekst kunnen neerzetten. 
-
 
   #### Muis en Toetsenbord 
   Je kunt bij met tab niet terug door de website heen. Het is duidelijk wat geselecteerd is, wat de focusstand is, alleen 
@@ -123,7 +119,6 @@
 ## Breakdownschets (week 1)
 
 <details>
-  <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina 1: 
   <img src="readme-images/breakoutpag1.png" width="375px" alt="breakdown van de hele pagina 1">
@@ -142,7 +137,6 @@
 ## Voortgang 1 (week 2)
 
 <details>
-  <summary>uitwerken voor 1e voortgang</summary>
 
   ### Stand van zaken
   Het opzetten van de HTML ging naar mijn mening goed. Toch wil ik checken of het semantisch klopt. Het is voor mij erg 
@@ -184,7 +178,6 @@
 ## Voortgang 2 (week 3)
 
 <details>
-  <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
   De eerste website pagina, podcasts, ziet er goed uit. Er is nog niet in css gewerkt met de styling codes. Toch heb ik 
@@ -212,9 +205,7 @@
 </details> 
 
 ## Toegankelijkheidstest 2/2 (week 4)
-
 <details>
-  <summary>uitwerken na test in 8e werkgroep</summary>
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
@@ -295,13 +286,14 @@
 </details>
 
 ## Voortgang 3 (week 4)
-
 <details>
-  <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  De website wordt door de CSS steeds mooier. Het gaat eigenlijk heel goed. Mijn eerste pagina heb ik bijna af, alleen  
+  moet ik daar nog states toevoegen en de HTML / CSS netjes met comments verwerken in het bestand. Pagina twee is meer     
+  werk aan de winkel, daar moet ik states toevoegen, de MP3 speler dinges nog verder maken en social media buttons meer    
+  ruimte geven. Ook moet ik mijn html qua opbouw bij de articles veranderen, eerst een H1 en dan pas een img, niet    
+  andersom. 
 
   ### Agenda voor meeting
   1. student 1: Jordy - Jordy wil graag zijn menu knoppen fixen, de knoppen van airbnb in bovenste gedeelte. Jordy wil ene 
@@ -322,9 +314,7 @@
 </details>
 
 ## Eindgesprek (week 5)
-
 <details>
-  <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
   #### Pagina 1 - Podcast overzicht :
@@ -345,7 +335,6 @@
 </details>
 
 ## Bronnenlijst
-
 <details open>
 
   1. bron 1:
