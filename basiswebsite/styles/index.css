@@ -1,0 +1,252 @@
+/* root */
+:root {
+	--background-color-article:rgb(237,237,237);
+	--categorieen-color:rgb(158, 56, 138);
+	--background-blok2:rgb(158,22,131);
+	--background-color-button:rgb(255,73,220);
+	--text-color-button:rgb(255	255	255);
+	--text-p:rgb(105, 104, 104);
+	--kleur-invoerveld:rgb(235,238,239);
+	--categorie-stipje:rgb(87, 87, 87);
+	--text-h1-section2:rgb(255	255	255);
+}
+
+/* main */ 
+main > h1 {
+	font-size:3em;
+	text-align:center;
+	margin-top:2em;
+}
+
+main {
+	padding:0em;
+}
+
+/* hele lijst articles & twee navs */
+main section:nth-of-type(1) {
+	display:grid;
+	gap:1.5em;
+	padding:1em;
+}
+
+/* articles */ 
+/* Blogberichten kaders */ 
+main section:nth-of-type(1) article {
+	display:flex;
+	flex-direction:column;
+	background-color:var(--background-color-article);
+	padding-bottom:1em;
+	border-radius:1em;
+	box-shadow:0em 0em 0.5em rgb(163, 162, 162);
+}
+
+/* buttons in blog berichten */ 
+main section:nth-of-type(1) article a {
+	display:flex;
+	align-items:center;
+	max-width:7em;
+	margin-left:1em;
+	padding:0.8em;
+	gap:0.7em;		
+
+	background-color:var(--background-color-button);
+	border-radius:0.3em;
+
+	color:var(--text-color-button);
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+/* kopjes in blogpost */ 
+main section:nth-of-type(1) article h2 {
+	padding-left:1em;
+	padding-right:1em;
+	order:2;
+}
+
+/* img in blogpost */
+main section:nth-of-type(1) article img {
+	order:1;
+}
+
+/* tekst in blogpost */ 
+main section:nth-of-type(1) article p {
+	color:var(--text-p);
+	line-height:2em;
+	padding-left:1em;
+	padding-right:1em;
+	order:3;
+}
+
+main section:nth-of-type(1) article p:nth-of-type(2) {
+    margin-top:0;
+    margin-bottom:2em;
+}
+
+/* button met link */
+main section:nth-of-type(1) article a {
+	margin-bottom:1em;
+	order:4;
+}
+
+/* filter met zoekbalk */
+main section:nth-of-type(1) nav:nth-of-type(1) {
+	order:100;
+}
+
+main section:nth-of-type(1) nav:nth-of-type(1) h2 {
+	font-family:"Amaranth", Arial, Helvetica, sans-serif;
+	color:var(--categorieen-color);
+	font-size:1.5em;
+}
+
+/* zoekbalk */
+main section:nth-of-type(1) nav:nth-of-type(1) form {
+	display:initial;
+	position:relative;
+	z-index:-1;
+	flex-shrink: 0; /* Flex-shrink zorgt ervoor dat alles op z'n plek blijft, in plaats van in elkaar */
+}
+
+main section:nth-of-type(1) nav:nth-of-type(1) form button {
+	position:absolute;
+	right:1em;
+	top:50%;
+	transform:translateY(-50%);
+	border:none;
+}
+
+main section:nth-of-type(1) nav:nth-of-type(1) input[type="search"] {
+	background-color:var(--kleur-invoerveld);
+	padding:2em;
+	width:100%;
+	border:0.1em solid black;
+	border-radius:20em;
+}
+
+/* filter van categorieën */ 
+main section:nth-of-type(1) nav:nth-of-type(1) ul {
+	padding-left:1em;
+}
+
+main section:nth-of-type(1) nav:nth-of-type(1) ul li {
+	color:var(--categorieen-color);
+	font-family:"Roboto regular", Arial, Helvetica, sans-serif;
+	margin-bottom:1em;
+}
+
+main section:nth-of-type(1) nav:nth-of-type(1) ul li::marker {
+	color:var(--categorie-stipje);
+}
+
+/* paginering */
+main section:nth-of-type(1) nav:nth-of-type(2) {
+	grid-column-start:1;
+	grid-column-end:-1;
+}
+
+main section:nth-of-type(1) nav:nth-of-type(2) ul {
+	display:flex;
+	justify-content:center;
+	list-style:none;
+	gap:1.5em;
+    font-size:1em;
+}
+
+main section:nth-of-type(1) nav:nth-of-type(2) ul a {
+ 	color:var(--categorieen-color);
+ 	text-decoration:none;
+}
+
+main section:nth-of-type(1) nav:nth-of-type(2) ul a:first-of-type {
+	color:var(--categorieen-color);
+	text-decoration:none;
+}
+
+/* states - articles */ 
+/* states van de button */
+main section:nth-of-type(1) article a:hover {
+	transform:scale(1.1); 
+	-ms-transform:scale(1.1); /* IE 9 */
+	-webkit-transform:scale(1.1); /* Safari 3-8 */
+}
+
+/* states van de categorieën */
+main section:nth-of-type(1) nav:nth-of-type(1) li:hover {
+	color:var(--background-color-button);
+	transform:scale(1.1); 
+	-ms-transform:scale(1.1); /* IE 9 */
+	-webkit-transform:scale(1.1); /* Safari 3-8 */
+}
+
+/* media query - section 1 */ 
+@media (min-width:50em) {
+	main section:nth-of-type(1) {
+		grid-template-columns:1fr 1fr ;
+	}
+}
+
+@media (min-width:85em) {
+	main section:nth-of-type(1) {
+		grid-template-columns: repeat(4,1fr);
+		padding-right:10em;
+		padding-left:10em;
+	}
+
+	main section:nth-of-type(1) nav:nth-of-type(1) {
+		grid-row-start:1;
+		grid-row-end:6;
+		grid-column:4;
+	}
+}
+	
+/************* tweede section *************/ 
+main section:nth-of-type(2) {
+	padding:1em;
+	background-color:var(--background-blok2);
+}
+
+main section:nth-of-type(2) section {
+	padding-bottom:4em;
+}		
+
+main section:nth-of-type(2) h1 {
+	color:var(--text-h1-section2);
+	font-size:3em;
+	text-align:center;
+}
+
+main section:nth-of-type(2) article {
+	border-radius:0em;
+}		
+
+/* media query - section 2 */
+@media (max-width:50em) {
+	main section:nth-of-type(2) section {
+		display:grid; 
+		grid-template-columns:1fr;
+	}
+}
+
+@media (min-width:50em) {
+	main section:nth-of-type(2) section {
+		display:grid; 
+		grid-template-columns:1fr 1fr;
+	}
+}
+
+@media (min-width:85em) {
+	main section:nth-of-type(1) nav:nth-of-type(1) form {
+		display:initial;
+		position:relative;
+		z-index: 0;
+		flex-shrink: 0; /* Dit zorgt ervoor dat alles op z'n plek blijft, in plaats van in elkaar */
+	}
+
+	main section:nth-of-type(2) section {
+		display:grid; 
+		grid-template-columns:1fr 1fr 1fr;
+		gap:1.5em;
+	}
+}
