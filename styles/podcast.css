@@ -1,105 +1,214 @@
-/****************/ /* Main */ /****************/
-main {
-	/* margin:1em; */
-	padding:1em; 
-	background-color:rgb(246,246,246);
+/* custom properties */
+:root {
+	--background-color:rgb(255, 255, 255);
+	--background-grey:rgb(246,246,246);
+	--color-text:rgb(158,22,131);
+	--link-text:rgb(225, 30, 186);
+	--active-text:rgb(89, 17, 75);
+	--kop-site:rgb(0, 0, 0);
+	--ptekst-artikel:rgb(92, 92, 92);
+	--music-player:rgb(238,238,238);
+	--text-kopjes:rgb(158,22,131);
+	--button-knop:rgb(254,73,220);
+	--sterren-rating:rgb(255,205,0);
+	--prijs-kleur:rgb(209,44,42);
+	--voorraad-info:rgb(0, 153, 0);
+	--text-boeken:rgb(255, 255, 255);
+	--background-button:rgb(51, 102, 204);
+	--background-button-hover:rgb(41, 103, 227);
+	--schaduw-button:rgb(145, 182, 254);
+	--link-focus:rgb(171, 24, 142);
 }
 
+/* main */ 
+main {
+	background-color:var(--background-grey);
+	padding-top:1em; 
+	padding-bottom:1em; 
+}
 
 /* header */
 header {
-	background-color:rgb(246,246,246);
+	background-color:var(--background-grey);
 }
 
-
-/* 1e section  */
+/* eerste section */
 main article:first-child {
-	margin-top: 4em;
-    margin-left: 6em;
-    margin-right: 10em;
-    background-color: white;
-}
-
-main article:first-child section:nth-of-type(1) {
-	background-color: #ffffff;
-	padding-top: 1em;
-	padding-left: 3em;
-	padding-right: 3em;
+	background-color:var(--background-color);
+	margin-top:4em;
 }
 
 main section:nth-of-type(1) h1 {
-	text-align: center;
-    font-size: 3em;
-	color:black;
+	color:var(--kop-site);
+	font-size:3em;
+	text-align:center;
+}
+
+main section:nth-of-type(1) h1:first-child {
+	padding-top:1em;
+}
+
+main section:nth-of-type(1) > img {
+	padding-left:0.8em;
+    padding-right:0.8em;
+}
+
+main section:nth-of-type(1) h2 {
+	font-family:"Amaranth", Arial, Helvetica, sans-serif;
+	padding-left:1em;
+    font-size:1.8em;
+}
+
+main section:nth-of-type(1) h3 {
+	font-family:"Amaranth", Arial, Helvetica, sans-serif;
+	padding-left:1.5em;
+    font-size:1.3em;
+}
+
+main article:first-child section:nth-of-type(1) p {
+	color:var(--ptekst-artikel);
+	background-color:var(--background-color);
+	padding-left:2em;
+	padding-right:2em;
 }
 
 main section:nth-of-type(1) > p:nth-of-type(1) {
+	text-align:center;
 	padding:1em;
-	text-align: center;
 }
 
-/* 2e section  */
+main article:first-child section:nth-of-type(1) p:nth-of-type(5) a {
+	color:var(--color-text);
+	text-decoration:none;
+}
+
+/* states - eerste section */
+main article:first-child section:nth-of-type(1) p:nth-of-type(5) a:hover {
+	color:var(--link-text);
+	font-weight:600;
+}
+
+main article:first-child section:nth-of-type(1) p:nth-of-type(5) a:active {
+	color:var(--active-text);
+}
+
+/* media query - eerste section */
+@media (min-width:85em) {
+	main {
+		padding-left:15em;
+		padding-right:15em;
+	}
+
+	main article:first-child {
+		margin-left:6em;
+		margin-right:10em;
+	}
+
+	main article:first-child section:nth-of-type(1) {
+		padding-left:0em;
+		padding-right:0em;
+	}
+
+	main section:nth-of-type(1) h2 {
+		padding-left:1.6em;
+	}
+
+	main section:nth-of-type(1) h3 {
+		padding-left:2.3em;
+	}
+
+	main section:nth-of-type(1) img {
+		padding-left:0em;
+		padding-right:0em;
+	}
+
+	main article:first-child section:nth-of-type(1) p {
+		background-color:var(--background-color);
+		padding-right:3em;
+		padding-left:3em;
+	}
+}
+
+/* tweede section */
 main section:nth-of-type(2) {
-	margin: 3em;
-    padding-bottom: 2em;
+	margin:2em;
 }
 
 main section:nth-of-type(2) h2 {
-	font-size: 1.8em;
+	color:var(--text-kopjes);
+	font-family:"Amaranth", Arial, Helvetica, sans-serif;
+	font-size:1.8em;
 }
 
 main section:nth-of-type(2) ul {
-	display: flex;
+	display:flex;
 	gap:1.5em;
 	padding-left:0em;
-	list-style: none;
- }
+	list-style:none;
+}
 
 main section:nth-of-type(2) ul li {
-	width: 2em;
+	width:2em;
 }
 
 main section:nth-of-type(2) ul li img {
-	width: 100%;
+	width:100%;
 }
 
-/* player */
+/* mp3 player */
 main section:nth-of-type(2) section {
+	background-color:var(--music-player);
 	display:grid;
-	grid-template-columns:4em 1fr max-content;
+	grid-template-columns:5em 1fr max-content;
 	gap:.5em;
 }
 
 main section:nth-of-type(2) section h3 {
-	grid-column-start: 2;
+	grid-column-start:2;
 	grid-row-start:1;
+	padding-left:0.6em;
 }
 
 /* logo */
-main section:nth-of-type(2) section img:nth-of-type(1) {
-	grid-column-start: 3;
+main section:nth-of-type(2) section > img:nth-of-type(1) {
+	grid-column-start:3;
 	grid-row-start:1;
+	padding-right:2em;
+	padding-top:1em;
 }
 
 /* willemijn */
 main section:nth-of-type(2) section img:nth-of-type(2) {
-	grid-column-start: 1;
+	grid-column-start:1;
 	grid-row-start:1;
 	grid-row-end:3;
 	width:100%;
+	padding:0;
 }
 
 /* scrolling text */
 main section:nth-of-type(2) section marquee {
-	grid-column-start: 2;
-	grid-column-end: 4;
+	grid-column-start:2;
+	grid-column-end:4;
 	grid-row-start:2;
+	font-family:"Roboto", Arial, Helvetica, sans-serif;
+	margin-left:1em;
 }
 
 /* button */
 main section:nth-of-type(2) section button {
 	grid-column-start: 1;
 	grid-row-start:3;
+	border:solid;
+	border-radius:5em;
+	border-color:var(--button-knop);
+	margin-left:1em;
+    margin-bottom:1em;
+}
+
+/* button img */
+main section:nth-of-type(2) section button img:nth-of-type(1) {
+    margin:0.7em;
 }
 
 /* audio */
@@ -109,146 +218,300 @@ main section:nth-of-type(2) section audio {
 
 /* audio img */
 main section:nth-of-type(2) section img:nth-of-type(3) {
-	grid-column-start: 2;
-	grid-column-end: 4;
+	grid-column-start:2;
+	grid-column-end:4;
 	grid-row-start:3;
+    width:100%;
+	max-width:40em;
 }
 
+/* states - tweede section */
+/* iconen boven mp3 speler */
+main section:nth-of-type(2) ul li:hover {
+	transform:scale(1.1); 
+	-ms-transform:scale(1.1); /* IE 9 */
+	-webkit-transform:scale(1.1); /* Safari 3-8 */
+}
+
+/* button audio player */
+main section:nth-of-type(2) section button:hover {
+	transform:scale(1.1); 
+	-ms-transform:scale(1.1); /* IE 9 */
+	-webkit-transform:scale(1.1); /* Safari 3-8 */
+}
+
+/* media query - tweede section */
 @media (min-width:50em) {
+	main section:nth-of-type(2) {
+		padding-right:1em;
+	}
+		
 	main section:nth-of-type(2) section {
-		grid-template-columns:10em max-content 1fr max-content;
+		grid-template-columns:14em max-content 1fr max-content;
 	}
 
 	main section:nth-of-type(2) section h3 {
-		/* grid-column-start: 2; */
-		grid-column-end: 4;
-		/* grid-row-start:1; */
+		grid-column-end:4;
 	}
 
 	/* logo */
 	main section:nth-of-type(2) section img:nth-of-type(1) {
-		grid-column-start: 4;
-		/* grid-row-start:1; */
+		grid-column-start:4;
 	}
 
 	/* willemijn */
 	main section:nth-of-type(2) section img:nth-of-type(2) {
-		/* grid-column-start: 1; */
-		/* grid-row-start:1; */
 		grid-row-end:4;
-		/* width:100%; */
 	}
+
 	/* scrolling text */
 	main section:nth-of-type(2) section marquee {
-		/* grid-column-start: 2; */
-		grid-column-end: 5;
-		/* grid-row-start:2; */
+		grid-column-end:5;
 	}
 
 	/* button */
 	main section:nth-of-type(2) section button {
-		grid-column-start: 2;
-		/* grid-row-start:3; */
+		grid-column-start:2;
+		margin-top:1em;
+		margin-left:1em;
+		margin-bottom:2.5em;
 	}
-	
+
+	/* button img */
+	main section:nth-of-type(2) section button img:nth-of-type(1) {
+		margin:0.7em;
+	}
+
 	/* audio img */
 	main section:nth-of-type(2) section img:nth-of-type(3) {
-		grid-column-start: 3;
-		grid-column-end: 5;
-		/* grid-row-start:3; */
+		grid-column-start:3;
+		grid-column-end:5;
 	}
 }
 
-/* 3e section */
+@media (min-width:85em) {
+	main section:nth-of-type(2) {
+		margin:3em;
+		padding-right:7em;
+	}
+
+	main section:nth-of-type(2) h3 {
+		padding-left:0.8em;
+	}
+}
+
+/* derde section */
 main section:nth-of-type(3) {
-	margin: 3em;
+	margin:2em;
+	padding-right:1.5em;
 } 
 
 main section:nth-of-type(3) h2 {
-	font-size: 1.8em;
+	font-family:"Amaranth", Arial, Helvetica, sans-serif;
+	color:var(--text-kopjes);
+	font-size:1.8em;
+	margin-top:2em;
 } 
 
-/* 1e aside - lijstje boeken */
+/* media query - derde section */
+@media (max-width:50em) {
+	iframe {
+		width:22.799999999999997em;
+		height:12.899999999999999em;
+	}
+}
 
+@media (min-width:50em) {
+	iframe {
+		width:48em;
+		height:28em;
+	}
+}
+
+@media (min-width:85em) {
+	main section:nth-of-type(3) {
+		margin:3em;
+	} 
+	
+	iframe {
+		width:61em;
+		height:34.4em;
+	}
+}
+	
+/* eerste aside */
 main aside:nth-of-type(1) {
-	margin: 3em;
+	margin:2em;
+	margin-bottom:2em;
 }
 
 main aside:nth-of-type(1) h2 {
-	font-size: 1.8em;
+	font-family:"Amaranth", Arial, Helvetica, sans-serif;
+	color:var(--text-kopjes);
+	font-size:1.8em;
+	margin-top:2em;
 }
 
 main aside:nth-of-type(1) ul {
-	list-style: none;
+	display:grid;
+	list-style:none;
 	margin:0;
 	padding:0;
-
-	display:grid;
-	gap:1em;
+	gap:2em;
 }
 
+main aside:nth-of-type(1) > ul p:nth-of-type(1) {
+	color:var(--sterren-rating);
+}
+
+main aside:nth-of-type(1) > ul p:nth-of-type(2) {
+	font-family:"Open Sans", Arial, Helvetica, sans-serif;
+    font-weight:600;
+	color:var(--prijs-kleur);
+}
+
+main aside:nth-of-type(1) > ul p:nth-of-type(3) {
+	color:var(--voorraad-info);
+}
+
+main aside:nth-of-type(1) div a {
+	color:var(--text-boeken);
+    background-color:var(--background-button);
+    font-size:1em;
+    border-radius:0.5em;
+    cursor:pointer;
+    text-align:center;
+    text-decoration:none;
+	border:1px solid transparent;
+    padding:0.5em 1em;
+}
+
+/* lijstje van boek */
 main aside:nth-of-type(1) ul li {
-	display: flex;
-	gap: 1em;
+	display:flex;
+	gap:1em;
+}
+main aside:nth-of-type(1) ul img {
+	width:12em;
+    max-width:100%;
+}
+
+main section:nth-of-type(4) ul {
+	font-family:"Roboto", Arial, Helvetica, sans-serif; 
+	list-style:none;
+	display:flex;
+	gap:1em;
+	padding-left:0em;
+}
+
+main section:nth-of-type(4) ul li {
+	width:3em;
+}
+
+main section:nth-of-type(4) ul li img {
+	max-width:20em;
+	width:100%;
 }
 
 main aside:nth-of-type(1) ul li > a {
 	order:-100;
 }
 
-main section:nth-of-type(4) ul{
-	display: flex;
-	gap:1em;
-	padding-left:0em;
-	list-style: none;
+main aside:nth-of-type(1) a {
+	color:var(--text-kopjes);
+	text-decoration:none;
 }
 
-main section:nth-of-type(4) ul li {
-	width: 3em;
+main aside:nth-of-type(1) h3 {
+	font-family:"Roboto", Arial, Helvetica, sans-serif; 
+	color:var(--text-kopjes);
+	margin:0;
 }
 
-main section:nth-of-type(4) ul li img {
-	width: 100%;
+/* states - eerste aside */
+/* link in p van rijtje boeken */
+main aside:nth-of-type(1) p a:first-child:hover {
+	color:var(--link-text);
 }
 
-/* 2de aside */
+/* afbeelding boeken */
+main aside:nth-of-type(1) ul img:hover {
+	transform:scale(1.02); 
+	-ms-transform:scale(1.02); /* IE 9 */
+	-webkit-transform: scale(1.02); /* Safari 3-8 */
+}
+
+/* states buttons van bol.com */
+main aside:nth-of-type(1) div a:hover {
+	background-color:var(--button-knop);
+}
+
+main aside:nth-of-type(1) div a:active {
+	background-color:var(--background-button);
+	box-shadow:0 5px var(--schaduw-button);
+	transform:translateY(4px);
+}
+
+/* media query - eerste aside */
+@media (min-width:85em) {
+	main aside:nth-of-type(1){
+		margin:3em;
+	}
+}
+
+/* tweede aside */
 main aside:nth-of-type(2) h2 {
-	position: absolute;
-	clip: rect(0 0 0 0);
+	position:absolute;
+	clip:rect(0, 0, 0, 0);
 }
 
-/* 4de section */
+/* states - tweede aside */
+/* banner van storytell */
+main aside:nth-of-type(2) img:hover {
+	transform:scale(1.02); 
+	-ms-transform:scale(1.02); /* IE 9 */
+	-webkit-transform:scale(1.02); /* Safari 3-8 */
+}
+
+/* vierde section */
+main aside:nth-of-type(2) {
+	margin:2em;
+	cursor:pointer;
+}
+
 main section:nth-of-type(4) {
-	margin: 3em;
-	padding-bottom: 2em;	
+	margin:2em;
+	padding-bottom:2em;	
 }
 
 main section:nth-of-type(4) h2 {
-	font-size: 1.8em;
+	font-family:"Amaranth", Arial, Helvetica, sans-serif;
+    color:var(--kop-site);
+	margin-top:2em;
 }
 
-/****************/ /* Media query's */ /****************/
-
-/* Default: 1 column */ 
-@media (max-width:50em) {
-	iframe {
-		width: 19.5em;
-		height: 11em;
-	}
+/* states - vierde section */
+/* social icons "deel deze podcast" */
+section:nth-of-type(4) ul li img:hover {
+	transform:scale(1.1); 
+	-ms-transform:scale(1.1); /* IE 9 */
+	-webkit-transform:scale(1.1); /* Safari 3-8 */
 }
 
-/* Breakpoint 1: 2 columns */ 
-@media (min-width:50em) {
-	iframe {
-		width: 48em;
-		height: 28em;
-	}
-}
-
-/* Breakpoint 2: 3 columns */ 
+/* media query - vierde section */
 @media (min-width:85em) {
-	iframe {
-		width: 83em;
-		height: 45em;
+	main section:nth-of-type(4) {
+		margin:3em;
+		padding-bottom:2em;	
 	}
 }
+
+
+
+
+
+
+
+
+
+

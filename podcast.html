@@ -21,6 +21,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
+	<!-- Favicon: logo van kukuru -->
 	<link rel="icon" type="image/svg+xml" href="images/faviconkukuru.svg">
 </head>
 
@@ -32,10 +33,10 @@
 			<img src="images/logoweb.svg" alt="logo Kukuru podcast"> <!-- Logo/naam -->
 		</a>
 
-		<button aria-hidden="true"><img src="images/hamburgermenu.png" alt="Menu"/>Menu</button>
+		<button aria-hidden="true"><img src="images/hamburgermenu.png" alt="Menu">Menu</button>
 
-		<nav>
-			<button aria-hidden="true"><img src="images/sluitmenu.svg" alt="Button om hamburger menu te sluiten"/>Sluit</button>
+		<nav aria-label="Eerste">
+			<button aria-hidden="true"><img src="images/sluitmenu.svg" alt="Button om hamburger menu te sluiten">Sluit</button>
 			<ul>
 				<li><a href="https://kukuru.nl/over-kukuru/">Over Kukuru</a></li>
 				<li><a href="index.html">Podcast</a></li>
@@ -44,21 +45,23 @@
 				<li><a href="https://kukuru.nl/boekenkast/">Boekenkast</a></li>
 				<li><a href="https://kukuru.nl/webshop/">Webshop</a></li>
 				<li><a href="https://kukuru.nl/contact/">Contact</a></li>
-				<li><a href="https://kukuru.nl/mijn-account/edit-account/"><img src="images/profileicon.svg" alt="mijn account"/></a></li>
-				<li><a href="https://kukuru.nl/winkelwagen/"><img src="images/buyicon.svg" alt="naar winkelmandje"/></a></li>
-				<li><a href="https://kukuru.nl/?s="><img src="images/searchicon.svg" alt="zoekbalk"/></a></li>
+				<li><a href="https://kukuru.nl/mijn-account/edit-account/"><img src="images/profileicon.svg" alt="mijn account"></a></li>
+				<li><a href="https://kukuru.nl/winkelwagen/"><img src="images/buyicon.svg" alt="naar winkelmandje"></a></li>
+				<li><a href="https://kukuru.nl/?s="><img src="images/searchicon.svg" alt="zoekbalk"></a></li>
 			</ul>
 		</nav>
 
-		<!-- Deze div wordt gebruikt om een waas te maken wanneer je een hamburgermenu aandrukt  -->
+		<!-- Deze div wordt gebruikt om een waas te maken wanneer je een hamburgermenu aandrukt -->
 		<div></div>
 
 	</header>
 
-    <main> <!-- Hier mag een class gebruikt worden, omdat ik dan 1 css bestand kan behouden. En nth-of-type styling de breaking points gebruikt wordt voor pag1 -->
+    <main> 
 
         <article>
+
             <section>
+
 				<h1>Willemijn Welten | KUKURU #157</h1>
 
 				<p> <time datetime="2022-11-16">16 november 2022</time> </p>
@@ -88,13 +91,14 @@
 				<h3>Meer Willemijn?</h3>
 
 				<p>
-					Wil je het nieuwe boek van Willemijn Welten, ‘Wonderen Manifesteren’? Check https://bit.ly/WonderenManifesteren Mee doen met de workshop: vergeving doe je voor jezelf. Check https://bit.ly/VergevingDoeJeVoorJezelf of één van de kaartendeck sets bestellen? Check: https://bit.ly/KaartendeckManifesteren Of voor kinderen: https://bit.ly/Kinderkaarten 
+					Wil je het nieuwe boek van Willemijn Welten, ‘Wonderen Manifesteren’? Check <a href="https://bit.ly/WonderenManifesteren">het boek</a> Mee doen met de workshop: vergeving doe je voor jezelf. Check <a href=" https://bit.ly/VergevingDoeJeVoorJezelf">de workshop</a> of één van de kaartendeck sets bestellen? Check <a href="https://bit.ly/KaartendeckManifesteren">het kaartendek</a> Of voor kinderen <a href="https://bit.ly/Kinderkaarten"> het kinderkaarten dek</a>..
 				</p>
 
 			</section>
 
-			<!-- Social icons -->
+			<!-- Podcast luisteren op andere platforms -->
 			<section>
+
 				<h2>Beluister de podcast</h2>	
 				<nav>
 					<ul>
@@ -104,34 +108,42 @@
 					</ul>
 				</nav>
 
-			<!-- Podcast afspeler mp3 -->
+				<!-- Podcast afspeler mp3 -->
 				<section>
+
 					<h3>KUKURU</h3>
-					<img src="logo" alt="logo">
+
+					<img src="images/logoart19.svg" alt="logo">
 
 					<img src="images/fotowillemijn.png" alt="Podcast foto van Willemijn Welten">
 
 					<marquee>Willemijn Welten over doelen manifesteren, het ego en je intuïtie | KUKURU #157</marquee>
-					<button class="mp3button">Play</button>
 
-					<img src="" alt="geluid">
+					<button class="mp3button"><img src="images/musicplay.png" alt="speel muziek af"></button>
+
+					<img src="images/geluidsgolf.svg" alt="geluid">
 
 					<audio>
-						<source src="https://assets.codepen.io/274456/pop.m4a" type="audio/mpeg">
+						<source src="https://assets.codepen.io/274456/pop.m4a" type="audio/mp3">
 					</audio>
 
 				</section>
+
 			</section>
 
 			<!-- Video -->
 			<section>
-				<h2>Bekijk de podcast met beeld</h2>
+
+				<h2>Bekijk de podcast</h2>
+				
 				<iframe src="https://www.youtube.com/embed/fMsMjaqd9Z4?autoplay=1&mute=1" title="YouTube video player" ></iframe>
+			
 			</section>
 			
 
-			<!-- Boeken -->
+			<!-- Boeken van Willemijn -->
 			<aside>
+
 				<h2>Willemijn's boeken</h2>
 				<p>Dit zijn de meest inspirerende boeken volgens Willemijn. Wil je de boeken zien van de andere gasten? Check dan de <a href="https://kukuru.nl/boekenkast/">KUKURU boekenkast!</a></p>
 				<ul>
@@ -139,9 +151,10 @@
 					<li>
 						<div>
 							<h3>Light is the new black</h3>
+							<p>★★★★★</p>
 							<p>€13,49</p>
 							<p>Op voorraad. Voor 23:59 besteld, morgen in huis</p>
-							<a href="">Koop bij bol.com</a>
+							<a aria-label="Boek Light is the new black bestellen" href="https://www.bol.com/nl/nl/p/light-is-the-new-black/9200000038828923/?Referrer=ADVNLPPcef1cb0099e6c7710065bba51d011055019&utm_source=1055019&utm_medium=Affiliates&utm_campaign=CPS&utm_content=pdl">Koop bij bol.com</a>
 						</div>
 						<a href="https://www.bol.com/nl/nl/p/light-is-the-new-black/9200000038828923/?Referrer=ADVNLPPcef1cb0099e6c7710065bba51d011055019&utm_source=1055019&utm_medium=Affiliates&utm_campaign=CPS&utm_content=pdl"><img src="images/lightisthenewblack.png" alt="Het boek Light is the new magic"></a>
 					</li>
@@ -150,9 +163,10 @@
 					<li>
 						<div>
 							<h3>Terugkeer naar liefde</h3>
+							<p>★★★★★</p>
 							<p>€22,50</p>
 							<p>Op voorraad. Voor 23:59 besteld, morgen in huis</p>
-							<a href="">Koop bij bol.com</a>
+							<a aria-label="Boek Terugkeer naar liefde bestellen" href="https://www.bol.com/nl/nl/p/terugkeer-naar-liefde/9200000091494097/?Referrer=ADVNLPPcef1cb00e822f3d70065bba51d011055019&utm_source=1055019&utm_medium=Affiliates&utm_campaign=CPS&utm_content=pdl">Koop bij bol.com</a>
 						</div>
 						<a href="https://www.bol.com/nl/nl/p/terugkeer-naar-liefde/9200000091494097/?Referrer=ADVNLPPcef1cb00e822f3d70065bba51d011055019&utm_source=1055019&utm_medium=Affiliates&utm_campaign=CPS&utm_content=pdl"><img src="images/terugkeernaarliefde.png" alt="Het boek Terugkeer naar liefde"></a>
 					</li>
@@ -161,76 +175,82 @@
 					<li>
 						<div>
 							<h3>Big magic</h3>
+							<p>★★★★</p>
 							<p>€20,99</p>
 							<p>Op voorraad. Voor 23:59 besteld, morgen in huis</p>
-							<a href="">Koop bij bol.com</a>
+							<a aria-label="Boek Big magic bestellen" href="https://www.bol.com/nl/nl/p/big-magic/9300000093200059/?Referrer=ADVNLPPcef1cb00d3fe226e0065bba51d011055019&utm_source=1055019&utm_medium=Affiliates&utm_campaign=CPS&utm_content=pdl">Koop bij bol.com</a>
 						</div>
 						<a href="https://www.bol.com/nl/nl/p/big-magic/9300000093200059/?Referrer=ADVNLPPcef1cb00d3fe226e0065bba51d011055019&utm_source=1055019&utm_medium=Affiliates&utm_campaign=CPS&utm_content=pdl"><img src="images/bigmagic.png" alt="Het boek Big magic"></a>
 					</li>
+
 				</ul>
 
 			</aside>
 
 			<!-- Promo Storytell x Giel -->	
 			<aside>
+
 				<h2>hier een titel - die mag je verstoppen</h2>
+
 				<img src="images/gielenstorytell.svg" alt="Storytell actie: link naar 30 dagen gratis boeken luisteren">
+
 			</aside>
 
 			<!-- Podcast delen -->
 			<section> 
-				<h2>Deel deze podcast</h2>
+
+				<h2>DEEL DEZE PODCAST</h2>
+
 				<ul>
-					<li> <a href="https://www.facebook.com/groups/Kukuruclub"><img src="images/facebook.png" alt="Facebook"></a> </li>
-					<li> <a href="https://twitter.com/Giels"><img src="images/twitter.png" alt="Twitter"></a> </li>
-					<li> <a href="https://www.instagram.com/kukuruclub/"><img src="images/instagram.png" alt="Instagram"></a> </li>
-					<li> <a href="https://www.youtube.com/channel/UCDbqx_0w5Gyp4DbGstTuFBg"><img src="images/youtube.png"alt="YouTube"></a> </li>
+					<li> <a href="https://www.whatsapp.com/"><img src="images/whatsapp.png" alt="Delen via Whatsapp"></a> </li>
+					<li> <a href="https://www.facebook.com/groups/Kukuruclub"><img src="images/facebookicoon.png" alt="Delen via Facebook"></a> </li>
+					<li> <a href="https://twitter.com/Giels"><img src="images/twittericoon.png" alt="Delen via Twitter"></a> </li>
+					<li> <a href="https://linkedin.nl"><img src="images/linkedin.png" alt="Delen via LinkedIn"></a> </li>
+					<li> <a href="https://hotmail.com"><img src="images/mailicoon.png" alt="Delen via Mail"></a> </li>
 				</ul>
+
 			</section>
 
 		</article>
 
     </main>
 
-	<!-- Footer -->	
 	<footer>
 
 		<section>
-			<!-- Navigatie alle links -->	
-				<nav>
-					<ul>
-						<li><a href="index.html">Podcast</a></li>
-						<li><a href="https://kukuru.nl/over-kukuru/">Over Kukuru</a></li>
-						<li><a href="https://kukuru.nl/category/howto/">How-to</a></li>
-						<li><a href="https://kukuru.nl/verbinding/">Webinars</a></li>
-						<li><a href="https://kukuru.nl/boekenkast/">Boekenkast</a></li>
-						<li><a href="https://kukuru.nl/webshop/">Webshop</a></li>
-						<li><a href="https://kukuru.nl/contact/">Contact</a></li>
-					</ul>
-				</nav>
+			<!-- Navigatie alle links op site -->	
+			<nav>
+				<ul>
+					<li><a href="index.html">Podcast</a></li>
+					<li><a href="https://kukuru.nl/over-kukuru/">Over Kukuru</a></li>
+					<li><a href="https://kukuru.nl/category/howto/">How-to</a></li>
+					<li><a href="https://kukuru.nl/verbinding/">Webinars</a></li>
+					<li><a href="https://kukuru.nl/boekenkast/">Boekenkast</a></li>
+					<li><a href="https://kukuru.nl/webshop/">Webshop</a></li>
+					<li><a href="https://kukuru.nl/contact/">Contact</a></li>
+				</ul>
+			</nav>
 
 			<!-- Sociale media links -->	
-				<nav>
-					<ul>
-						<li><a href="https://www.youtube.com/c/Kukuru">Bekijk via YouTube</a></li>
-						<li><a href="https://open.spotify.com/show/78NNcGnMKJbfSF6NcN85Jm?si=Ket5dKklSGmyqHv80AL7EA&nd=1">Bekijk via Spotify</a></li>
-						<li><a href="https://podcasts.apple.com/nl/podcast/kukuru/id1445446206">Beluister via Apple Podcasts</a></li>
-						<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL2t1a3VydQ==">Beluister via Google Podcasts</a></li>
-					</ul>
-				</nav>
+			<nav>
+				<ul>
+					<li><a href="https://www.youtube.com/c/Kukuru">Bekijk via YouTube</a></li>
+					<li><a href="https://open.spotify.com/show/78NNcGnMKJbfSF6NcN85Jm?si=Ket5dKklSGmyqHv80AL7EA&nd=1">Bekijk via Spotify</a></li>
+					<li><a href="https://podcasts.apple.com/nl/podcast/kukuru/id1445446206">Beluister via Apple Podcasts</a></li>
+					<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9yc3MuYXJ0MTkuY29tL2t1a3VydQ==">Beluister via Google Podcasts</a></li>
+				</ul>
+			</nav>
 
 			<!-- Email vakje -->	
 			<section>
 
 				<h3>Schrijf je in voor de KUKURU nieuwsbrief</h3>
-
 				<!-- Naast NAME is er ook nog de VALUE. Hiermee kan je een standaard waarde geven die dan in het invulveld staat. 
 					VALUE is handig in combinatie met PHP. Het is dan handig om waarde door te geven die ingevoerd zijn. 
 					We gaan nu een invoerveld maken van hetzelfde type als daarnet, maar dan met een VALUE. 
 					De waarde zet je tussen haakjes achter VALUE. Het wordt een invoerveld om je e-mail adres in te voeren.
 					Bron: https://www.htmlschool.nl/les4.html -->
 				<form method="post" action="mailto:nikki.okker@hva.nl"><input type="text" name="email" placeholder="Je e-mailadres"></form>
-				
 				<button type="submit">Verstuur</button>
 
 			</section>
@@ -239,21 +259,24 @@
 
 		<!-- Social media buttons -->	
 		<nav>
-				<ul>
-					<li> <a href="https://www.facebook.com/groups/Kukuruclub"><img src="images/facebook.png" alt="Facebook"></a> </li>
-					<li> <a href="https://twitter.com/Giels"><img src="images/twitter.png" alt="Twitter"></a> </li>
-					<li> <a href="https://www.instagram.com/kukuruclub/"><img src="images/instagram.png" alt="Instagram"></a> </li>
-					<li> <a href="https://www.youtube.com/channel/UCDbqx_0w5Gyp4DbGstTuFBg"><img src="images/youtube.png"alt="YouTube"></a> </li>
-					<li> <img src="images/mail.png" action="mailto:nikki.okker@hva.nl" alt="Mailen"></li>
-				</ul>
+			<ul>
+				<li> <a href="https://www.facebook.com/groups/Kukuruclub"><img src="images/facebook.png" alt="Facebook"></a> </li>
+				<li> <a href="https://twitter.com/Giels"><img src="images/twitter.png" alt="Twitter"></a> </li>
+				<li> <a href="https://www.instagram.com/kukuruclub/"><img src="images/instagram.png" alt="Instagram"></a> </li>
+				<li> <a href="https://www.youtube.com/channel/UCDbqx_0w5Gyp4DbGstTuFBg"><img src="images/youtube.png" alt="YouTube"></a> </li>
+				<li> <img src="images/mail.png" alt="Mailen"></li>
+			</ul>
 		</nav>
 
+		<!-- Laat zien dat de website official is + bepaalde datum -->	
 		<p>© 2022 - KUKURU</p>
 
 	</footer>
 
+	<!-- Blokje op alle pagina's waarmee je vanzelf omhoog scrollt -->	
 	<a href="#"><img src="images/scrollicon.svg" alt="scroll naar boven"></a>
 
+	<!-- Microinteractie mogelijk maken op de website -->	
 	<script defer src="scripts/script.js"></script>
 
 </body>
