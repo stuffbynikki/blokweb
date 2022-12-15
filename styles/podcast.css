@@ -53,7 +53,7 @@ main section:nth-of-type(1) h1 {
 }
 
 main section:nth-of-type(1) h1:first-child {
-    padding: 1em 1em 0;
+    padding:1em 1em 0;
 }
 
 /* grote afbeelding van Willemijn & Giel */

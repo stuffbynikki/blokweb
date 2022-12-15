@@ -371,11 +371,10 @@
   3. States toevoegen aan social icons, lastig. 
     <img src="readme-images/socialicons.png" width="375px" alt="social icons">
 
-## Bronnenlijst
-<details open>
-  Dit zijn de bronnen die ik heb gebruikt:
-  1. Alle content op de website voor pagina 1 (tekst + afebeeldingen) bron 1: https://kukuru.nl/category/podcast/
-  2. Alle content op de website voor pagina 3 (tekst + afebeeldingen) bron 2: https://kukuru.nl/2022/10/23/willemijn- 
+  ## Bronnenlijst:
+  ### Dit zijn de bronnen die ik heb gebruikt:
+  1. Alle content op de website voor pagina 1 (tekst + afbeeldingen) bron 1: https://kukuru.nl/category/podcast/
+  2. Alle content op de website voor pagina 2 (tekst + afbeeldingen) bron 2: https://kukuru.nl/2022/10/23/willemijn- 
   welten-kukuru-157/
   3. Video om te begrijpen hoe custom properties werken. bron 3: https://www.youtube.com/watch?v=PHO6TBq_auI&feature=youtu.be & https://codepen.io/shooft/pen/ZEyOOLM om de begin code te kopieëren. 
   4. Deze code gebruikt van Sanne voor de basis van mijn hamburgermenu en een darkmode. bron 4: https://codepen.io/shooft/pen/xxzjJeW
@@ -385,5 +384,4 @@
   8. Deze code overgenomen om mijn states bij hover te laten inzoomen. bron 8: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_zoom_hover
   9. Hoe <time> op de juiste manier gebruiken? bron 9: https://www.geeksforgeeks.org/html-time-datetime-attribute/
   10. Ronde buttons maken voor mijn mp3 speler. bron 10:https://www.w3schools.com/howto/howto_css_round_buttons.asp
-
 </details>
