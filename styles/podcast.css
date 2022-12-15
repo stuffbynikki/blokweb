@@ -2,6 +2,7 @@
 :root {
 	--background-color:rgb(255,255,255);
 	--background-grey:rgb(246,246,246);
+	--header-grey:rgb(246,246,246);
 	--color-text:rgb(158,22,131);
 	--link-text:rgb(225,30,186);
 	--active-text:rgb(0,0,0);
@@ -19,6 +20,14 @@
 	--link-focus:rgb(171,24,142);
 }
 
+/* media query - root */
+@media (prefers-color-scheme:dark) {
+:root {
+	--header-grey:rgb(46,46,46);
+	--background-grey:rgb(46,46,46);
+	}
+}
+
 /************** main **************/ 
 main {
 	background-color:var(--background-grey);
@@ -28,7 +37,7 @@ main {
 
 /************** header **************/
 header {
-	background-color:var(--background-grey);
+	background-color:var(--header-grey);
 }
 
 /************* eerste section *************/
@@ -44,7 +53,7 @@ main section:nth-of-type(1) h1 {
 }
 
 main section:nth-of-type(1) h1:first-child {
-	padding-top:1em;
+    padding: 1em 1em 0;
 }
 
 /* grote afbeelding van Willemijn & Giel */
@@ -359,8 +368,9 @@ main section:nth-of-type(3) h2 {
 	} 
 	
 	iframe {
-		width:61em;
-		height:34.4em;
+		width: 100%;
+		height: initial;
+		aspect-ratio: 4/2.5;
 	}
 }
 	

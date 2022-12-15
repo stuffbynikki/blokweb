@@ -13,6 +13,13 @@
 	--focus-a:rgb(0,0,0);
 }
 
+/* media query - root */
+@media (prefers-color-scheme:dark) {
+	:root {
+		--background-color-article:rgb(255,255,255);
+	}
+}
+
 /* main */ 
 main > h1 {
 	font-size:3em;

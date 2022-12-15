@@ -318,27 +318,72 @@
 
   ### Je uitkomst - karakteristiek screenshots:
   #### Pagina 1 - Podcast overzicht :
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst pagina 1">
+  <img src="readme-images/eindpagina1.png" width="375px" alt="uitkomst pagina 1">
 
   #### Pagina 2 - Spreker Willemijn Welten:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst pagina 2">
+  <img src="readme-images/eindpagina2.png" width="375px" alt="uitkomst pagina 2">
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  De dingen die erg goed verliepen: 
+  1. het opzetten van de html, dus alle content erin zitten. 
+  2. Daarnaast vond ik het makkelijk en leuk om te stylen/vormgeven qua kleur en typografie.
+  3. Zelf uitproberen en eruit komen met bepaalde dingen positioneren.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Wat heb ik écht nieuw geleerd:
+  1. Custom properties toevoegen aan css om elementen een kleur te geven.
+  <img src="readme-images/customproperties.png" width="375px" alt="custom properties">
+
+  2. Darkmode aanzetten, zodat als mensen in de avond naar de site kijken het prettiger is voor de ogen.
+    <img src="readme-images/darkmode.png" width="375px" alt="darkmode">
+    
+  3. Het hamburger menu om de site responsive te maken wanneer het op meerdere devices gebruikt word. 
+  <img src="readme-images/hamburgermenu.png" width="375px" alt="hamburgermenu">
+
+  4. Formulier vormgeven om iets in te typen.
+  <img src="readme-images/inputforms.png" width="375px" alt="input formulieren">
+
+  5. Media query toevoegen zodat alle content op elk device nuttig is. 
+    <img src="readme-images/mediaquery.png" width="375px" alt="mediaquery">
+    
+  6. Audio toevoegen aan een pagina.
+  <img src="readme-images/mp3speler.png" width="375px" alt="mp3speler">
+
+  7. States toevoegen zoals: focus, active, hover.
+  <img src="readme-images/statestoevoegen.png" width="375px" alt="states toevoegen">
+  
+  8. Position gebruiken om iets sticky/fixed op een pagina te maken. 
+  <img src="readme-images/positiongebruiken.png" width="375px" alt="position gebruiken">
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Wat vond ik lastig: 
+  1. Nadat ik alle content in mijn html bestand had gezet moest ik alles gaan positioneren, dit vond ik echt moeilijk. Met 
+  nam het gebruik maken van GRID. gezien ik nog nooit zoiets heb gedaan. 
+  2. Ook position gebruiker met left, right, top en bottom lukte mij in begin niet. 
+  3. Audio toevoegen aan de website. 
+  4. States geven aan bepaalde iconen (Niet gelukt, dan alleen :hover).
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
-</details>
+  1. Grid geven aan mijn artikelen was moeilijk. 
+    <img src="readme-images/grid.png" width="375px" alt="grid">
+
+  2. Het hamburger menu op de site krijgen en responsive voor telefoon en pc was lastig, maar is gelukt! 
+  <img src="readme-images/hamburgermenu.png" width="375px" alt="hamburgermenu">
+
+  3. States toevoegen aan social icons, lastig. 
+    <img src="readme-images/socialicons.png" width="375px" alt="social icons">
 
 ## Bronnenlijst
 <details open>
-
-  1. bron 1:
-  2. bron 2:
-  3. bron 3: 
+  Dit zijn de bronnen die ik heb gebruikt:
+  1. Alle content op de website voor pagina 1 (tekst + afebeeldingen) bron 1: https://kukuru.nl/category/podcast/
+  2. Alle content op de website voor pagina 3 (tekst + afebeeldingen) bron 2: https://kukuru.nl/2022/10/23/willemijn- 
+  welten-kukuru-157/
+  3. Video om te begrijpen hoe custom properties werken. bron 3: https://www.youtube.com/watch?v=PHO6TBq_auI&feature=youtu.be & https://codepen.io/shooft/pen/ZEyOOLM om de begin code te kopieëren. 
+  4. Deze code gebruikt van Sanne voor de basis van mijn hamburgermenu en een darkmode. bron 4: https://codepen.io/shooft/pen/xxzjJeW
+  5. Deze code toegepast voor het maken van audio op mijn website. bron 5: https://codepen.io/shooft/pen/gOKBaMm
+  6. Deze code gebruikt om erachter te komen hoe je een invoerveld gebruikt. bron 6: https://www.htmlschool.nl/les4.html 
+  7. Deze code toegepast om screenreader jusit te laten lezen (aria label). bron 7: https://www.aditus.io/aria/aria-label/
+  8. Deze code overgenomen om mijn states bij hover te laten inzoomen. bron 8: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_zoom_hover
+  9. Hoe <time> op de juiste manier gebruiken? bron 9: https://www.geeksforgeeks.org/html-time-datetime-attribute/
+  10. Ronde buttons maken voor mijn mp3 speler. bron 10:https://www.w3schools.com/howto/howto_css_round_buttons.asp
 
 </details>
