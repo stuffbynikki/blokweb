@@ -1,38 +1,37 @@
-/* custom properties */
+/************* custom properties *************/
 :root {
-	--background-color:rgb(255, 255, 255);
+	--background-color:rgb(255,255,255);
 	--background-grey:rgb(246,246,246);
 	--color-text:rgb(158,22,131);
-	--link-text:rgb(225, 30, 186);
-	--active-text:rgb(89, 17, 75);
-	--kop-site:rgb(0, 0, 0);
-	--ptekst-artikel:rgb(92, 92, 92);
+	--link-text:rgb(225,30,186);
+	--active-text:rgb(0,0,0);
+	--kop-site:rgb(0,0,0);
+	--ptekst-artikel:rgb(92,92,92);
 	--music-player:rgb(238,238,238);
 	--text-kopjes:rgb(158,22,131);
 	--button-knop:rgb(254,73,220);
 	--sterren-rating:rgb(255,205,0);
 	--prijs-kleur:rgb(209,44,42);
-	--voorraad-info:rgb(0, 153, 0);
-	--text-boeken:rgb(255, 255, 255);
-	--background-button:rgb(51, 102, 204);
-	--background-button-hover:rgb(41, 103, 227);
-	--schaduw-button:rgb(145, 182, 254);
-	--link-focus:rgb(171, 24, 142);
+	--voorraad-info:rgb(0,153,0);
+	--text-boeken:rgb(255,255,255);
+	--background-button:rgb(255,73,220);
+	--background-button-hover:rgb(41,103,227);
+	--link-focus:rgb(171,24,142);
 }
 
-/* main */ 
+/************** main **************/ 
 main {
 	background-color:var(--background-grey);
 	padding-top:1em; 
 	padding-bottom:1em; 
 }
 
-/* header */
+/************** header **************/
 header {
 	background-color:var(--background-grey);
 }
 
-/* eerste section */
+/************* eerste section *************/
 main article:first-child {
 	background-color:var(--background-color);
 	margin-top:4em;
@@ -48,11 +47,13 @@ main section:nth-of-type(1) h1:first-child {
 	padding-top:1em;
 }
 
+/* grote afbeelding van Willemijn & Giel */
 main section:nth-of-type(1) > img {
 	padding-left:0.8em;
     padding-right:0.8em;
 }
 
+/* artikel opbouw */
 main section:nth-of-type(1) h2 {
 	font-family:"Amaranth", Arial, Helvetica, sans-serif;
 	padding-left:1em;
@@ -60,6 +61,7 @@ main section:nth-of-type(1) h2 {
 }
 
 main section:nth-of-type(1) h3 {
+	color:var(--h2-color);
 	font-family:"Amaranth", Arial, Helvetica, sans-serif;
 	padding-left:1.5em;
     font-size:1.3em;
@@ -77,22 +79,33 @@ main section:nth-of-type(1) > p:nth-of-type(1) {
 	padding:1em;
 }
 
+/* linkjes in 5de section */
 main article:first-child section:nth-of-type(1) p:nth-of-type(5) a {
 	color:var(--color-text);
 	text-decoration:none;
+	font-weight:900;
+	outline:none;
+	position:relative;
+	transition:color .5s;
 }
 
-/* states - eerste section */
+/*** states - linkjes in 5de section ***/
 main article:first-child section:nth-of-type(1) p:nth-of-type(5) a:hover {
-	color:var(--link-text);
-	font-weight:600;
+	color:var(--active-text);
+	font-family:"Open Sans", Arial, Helvetica, sans-serif;
+}
+
+main article:first-child section:nth-of-type(1) p:nth-of-type(5) a:focus {
+	color:var(--active-text);
+	font-family:"Open Sans", Arial, Helvetica, sans-serif;
 }
 
 main article:first-child section:nth-of-type(1) p:nth-of-type(5) a:active {
 	color:var(--active-text);
+	font-family:"Open Sans", Arial, Helvetica, sans-serif;
 }
 
-/* media query - eerste section */
+/*** media query - eerste section ***/
 @media (min-width:85em) {
 	main {
 		padding-left:15em;
@@ -129,17 +142,19 @@ main article:first-child section:nth-of-type(1) p:nth-of-type(5) a:active {
 	}
 }
 
-/* tweede section */
+/************** tweede section **************/
 main section:nth-of-type(2) {
 	margin:2em;
 }
 
+/* titel tweede section */
 main section:nth-of-type(2) h2 {
 	color:var(--text-kopjes);
 	font-family:"Amaranth", Arial, Helvetica, sans-serif;
 	font-size:1.8em;
 }
 
+/* iconen podcast */
 main section:nth-of-type(2) ul {
 	display:flex;
 	gap:1.5em;
@@ -153,6 +168,19 @@ main section:nth-of-type(2) ul li {
 
 main section:nth-of-type(2) ul li img {
 	width:100%;
+}
+
+main section:nth-of-type(2) ul li a {
+	outline-color:var(--active-text);
+}
+
+/*** states - iconen podcast ***/
+
+/* hover - iconen social icons */
+main section:nth-of-type(2) nav ul li:hover {
+	transform:scale(1.1); 
+	-ms-transform:scale(1.1); /* IE 9 */
+	-webkit-transform:scale(1.1); /* Safari 3-8 */
 }
 
 /* mp3 player */
@@ -204,6 +232,8 @@ main section:nth-of-type(2) section button {
 	border-color:var(--button-knop);
 	margin-left:1em;
     margin-bottom:1em;
+
+	outline-color:var(--active-text);
 }
 
 /* button img */
@@ -225,22 +255,16 @@ main section:nth-of-type(2) section img:nth-of-type(3) {
 	max-width:40em;
 }
 
-/* states - tweede section */
-/* iconen boven mp3 speler */
-main section:nth-of-type(2) ul li:hover {
-	transform:scale(1.1); 
-	-ms-transform:scale(1.1); /* IE 9 */
-	-webkit-transform:scale(1.1); /* Safari 3-8 */
-}
+/*** - button audio player ***/
 
-/* button audio player */
+/* hover - button audio player */
 main section:nth-of-type(2) section button:hover {
 	transform:scale(1.1); 
 	-ms-transform:scale(1.1); /* IE 9 */
 	-webkit-transform:scale(1.1); /* Safari 3-8 */
 }
 
-/* media query - tweede section */
+/*** media query - tweede section ***/
 @media (min-width:50em) {
 	main section:nth-of-type(2) {
 		padding-right:1em;
@@ -300,12 +324,13 @@ main section:nth-of-type(2) section button:hover {
 	}
 }
 
-/* derde section */
+/************** derde section **************/
 main section:nth-of-type(3) {
 	margin:2em;
 	padding-right:1.5em;
 } 
 
+/* titel derde section */
 main section:nth-of-type(3) h2 {
 	font-family:"Amaranth", Arial, Helvetica, sans-serif;
 	color:var(--text-kopjes);
@@ -313,7 +338,7 @@ main section:nth-of-type(3) h2 {
 	margin-top:2em;
 } 
 
-/* media query - derde section */
+/*** media query - derde section ***/
 @media (max-width:50em) {
 	iframe {
 		width:22.799999999999997em;
@@ -339,12 +364,13 @@ main section:nth-of-type(3) h2 {
 	}
 }
 	
-/* eerste aside */
+/************** eerste aside **************/
 main aside:nth-of-type(1) {
 	margin:2em;
 	margin-bottom:2em;
 }
 
+/* titel van eerste aside */
 main aside:nth-of-type(1) h2 {
 	font-family:"Amaranth", Arial, Helvetica, sans-serif;
 	color:var(--text-kopjes);
@@ -352,6 +378,44 @@ main aside:nth-of-type(1) h2 {
 	margin-top:2em;
 }
 
+/* linkje: kukuru boekenkast */
+main aside:nth-of-type(1) a {
+	color:var(--text-kopjes);
+	text-decoration:none;
+	font-weight:900;
+	outline-color:var(--active-text);
+	position:relative;
+	transition:color .5s;
+}
+
+main aside:nth-of-type(1) p a:first-child {
+	outline:none;
+}
+
+/*** states - kukuru boekenkast linkje ***/
+
+/* hover - kukuru boekenkast linkje */
+main aside:nth-of-type(1) p a:first-child:hover {
+	color:var(--active-text);
+	font-family:"Open Sans", Arial, Helvetica, sans-serif;
+	font-weight:900;
+}
+
+/* focus - kukuru boekenkast linkje */
+main aside:nth-of-type(1) p a:first-child:focus {
+	color:var(--active-text);
+	font-family:"Open Sans", Arial, Helvetica, sans-serif;
+	font-weight:900;
+}
+
+/* active - kukuru boekenkast linkje */
+main aside:nth-of-type(1) p a:first-child:active {
+	color:var(--active-text);
+	font-family:"Open Sans", Arial, Helvetica, sans-serif;
+	font-weight:900;
+}
+
+/* alle 3 de boeken */
 main aside:nth-of-type(1) ul {
 	display:grid;
 	list-style:none;
@@ -360,25 +424,61 @@ main aside:nth-of-type(1) ul {
 	gap:2em;
 }
 
+/* lijstje van één boek */
+main aside:nth-of-type(1) ul li {
+	display:flex;
+	gap:1em;
+}
+
+main aside:nth-of-type(1) ul li > a {
+	order:-100;
+}
+
+/* afbeelding van boek */
+main aside:nth-of-type(1) ul img {
+	width:12em;
+    max-width:100%;
+}
+
+/*** states - afbeelding boek ***/
+
+/* hover - foto van boek */
+main aside:nth-of-type(1) ul img:hover {
+	transform:scale(1.02); 
+	-ms-transform:scale(1.02); /* IE 9 */
+	-webkit-transform: scale(1.02); /* Safari 3-8 */
+}
+
+/* titel van boek */
+main aside:nth-of-type(1) h3 {
+	font-family:"Roboto", Arial, Helvetica, sans-serif; 
+	color:var(--text-kopjes);
+	margin:0;
+}
+
+/* rating */
 main aside:nth-of-type(1) > ul p:nth-of-type(1) {
 	color:var(--sterren-rating);
 }
 
+/* prijs */
 main aside:nth-of-type(1) > ul p:nth-of-type(2) {
 	font-family:"Open Sans", Arial, Helvetica, sans-serif;
     font-weight:600;
 	color:var(--prijs-kleur);
 }
 
+/* voorraad info */
 main aside:nth-of-type(1) > ul p:nth-of-type(3) {
 	color:var(--voorraad-info);
 }
 
+/* link naar bol.com */
 main aside:nth-of-type(1) div a {
 	color:var(--text-boeken);
     background-color:var(--background-button);
     font-size:1em;
-    border-radius:0.5em;
+    border-radius:0.3em;
     cursor:pointer;
     text-align:center;
     text-decoration:none;
@@ -386,16 +486,64 @@ main aside:nth-of-type(1) div a {
     padding:0.5em 1em;
 }
 
-/* lijstje van boek */
-main aside:nth-of-type(1) ul li {
-	display:flex;
-	gap:1em;
-}
-main aside:nth-of-type(1) ul img {
-	width:12em;
-    max-width:100%;
+/*** states - link naar bol.com ***/
+
+/* hover - link naar bol.com */
+main aside:nth-of-type(1) div a:hover {
+	background-color:var(--active-text);
 }
 
+/* active - link naar bol.com */
+main aside:nth-of-type(1) div a:active {
+	background-color:var(--active-text);
+}
+
+/* focus - link naar bol.com */
+main aside:nth-of-type(1) div a:focus {
+	background-color:var(--active-text);
+}
+
+/*** media query - eerste aside ***/
+@media (min-width:85em) {
+	main aside:nth-of-type(1){
+		margin:3em;
+	}
+}
+
+/************** tweede aside **************/
+main aside:nth-of-type(2) {
+	margin:2em;
+	cursor:pointer;
+}
+
+main aside:nth-of-type(2) h2 {
+	position:absolute;
+	clip:rect(0,0,0,0);
+}
+
+/*** states - banner storytell ***/
+
+/* hover - banner storytell */
+main aside:nth-of-type(2) img:hover {
+	transform:scale(1.02); 
+	-ms-transform:scale(1.02); /* IE 9 */
+	-webkit-transform:scale(1.02); /* Safari 3-8 */
+}
+
+/************** vierde section **************/
+main section:nth-of-type(4) {
+	margin:2em;
+	padding-bottom:2em;	
+}
+
+/* titel vierde section */
+main section:nth-of-type(4) h2 {
+	font-family:"Amaranth", Arial, Helvetica, sans-serif;
+    color:var(--kop-site);
+	margin-top:2em;
+}
+
+/* lijstje van social icons */
 main section:nth-of-type(4) ul {
 	font-family:"Roboto", Arial, Helvetica, sans-serif; 
 	list-style:none;
@@ -408,97 +556,26 @@ main section:nth-of-type(4) ul li {
 	width:3em;
 }
 
+main section:nth-of-type(4) ul li a {
+	outline-color:var(--active-text);
+}
+
+/* foto's van social icons */
 main section:nth-of-type(4) ul li img {
 	max-width:20em;
 	width:100%;
 }
 
-main aside:nth-of-type(1) ul li > a {
-	order:-100;
-}
+/*** states - vierde section ***/
 
-main aside:nth-of-type(1) a {
-	color:var(--text-kopjes);
-	text-decoration:none;
-}
-
-main aside:nth-of-type(1) h3 {
-	font-family:"Roboto", Arial, Helvetica, sans-serif; 
-	color:var(--text-kopjes);
-	margin:0;
-}
-
-/* states - eerste aside */
-/* link in p van rijtje boeken */
-main aside:nth-of-type(1) p a:first-child:hover {
-	color:var(--link-text);
-}
-
-/* afbeelding boeken */
-main aside:nth-of-type(1) ul img:hover {
-	transform:scale(1.02); 
-	-ms-transform:scale(1.02); /* IE 9 */
-	-webkit-transform: scale(1.02); /* Safari 3-8 */
-}
-
-/* states buttons van bol.com */
-main aside:nth-of-type(1) div a:hover {
-	background-color:var(--button-knop);
-}
-
-main aside:nth-of-type(1) div a:active {
-	background-color:var(--background-button);
-	box-shadow:0 5px var(--schaduw-button);
-	transform:translateY(4px);
-}
-
-/* media query - eerste aside */
-@media (min-width:85em) {
-	main aside:nth-of-type(1){
-		margin:3em;
-	}
-}
-
-/* tweede aside */
-main aside:nth-of-type(2) h2 {
-	position:absolute;
-	clip:rect(0, 0, 0, 0);
-}
-
-/* states - tweede aside */
-/* banner van storytell */
-main aside:nth-of-type(2) img:hover {
-	transform:scale(1.02); 
-	-ms-transform:scale(1.02); /* IE 9 */
-	-webkit-transform:scale(1.02); /* Safari 3-8 */
-}
-
-/* vierde section */
-main aside:nth-of-type(2) {
-	margin:2em;
-	cursor:pointer;
-}
-
-main section:nth-of-type(4) {
-	margin:2em;
-	padding-bottom:2em;	
-}
-
-main section:nth-of-type(4) h2 {
-	font-family:"Amaranth", Arial, Helvetica, sans-serif;
-    color:var(--kop-site);
-	margin-top:2em;
-}
-
-/* states - vierde section */
-/* social icons "deel deze podcast" */
+/* hover - podcast delen */
 section:nth-of-type(4) ul li img:hover {
 	transform:scale(1.1); 
 	-ms-transform:scale(1.1); /* IE 9 */
 	-webkit-transform:scale(1.1); /* Safari 3-8 */
 }
 
-/* media query - vierde section */
+/*** media query - vierde section ***/
 @media (min-width:85em) {
 	main section:nth-of-type(4) {
 		margin:3em;

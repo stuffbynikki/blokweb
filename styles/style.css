@@ -10,9 +10,9 @@ button, summary {
 /* custom properties */
 :root {
 	--color-text-nav-open:rgb(158,22,131);
-	--color-text-nav-sluit:rgb(255, 255, 255);
-	--button-kleur:#ff49dc;
-	--color-background-nav:rgb(255, 255, 255);
+	--color-text-nav-sluit:rgb(255,255,255);
+	--button-kleur:rgb(255,73,220);
+	--color-background-nav:rgb(255,255,255);
 	--background-color-article:rgb(237,237,237);
 	--color-nav:rgb(246,246,246);
 	--datum-color:rgb(122,122,122);
@@ -20,10 +20,11 @@ button, summary {
 	--h1-color:rgb(158,22,131);
 	--h2-color:rgb(62,62,62);
 	--footer-background:rgb(46,46,46);
-	--color-footer:rgb(183, 182, 182);
-	--color-footer2:rgb(243, 243, 243);
+	--color-footer:rgb(183,182,182);
+	--color-footer2:rgb(243,243,243);
 	--color-scrolding:rgb(158,22,131);
-	--active-color:rgb(225, 24, 191);
+	--focus-color:rgb(225,24,191);
+	--active-color:rgb(0,0,0);
 
 	scroll-behavior: smooth;
 }
@@ -32,19 +33,33 @@ body {
 	margin:0;
 }
 
-/* states - main */
-main a {
-	/* om het standaard randje bij focus niet te tonen */
+/* blokje om naar hoog te scrollen */
+body > a {
+	position:fixed;
+	right:3em;
+	bottom:3em;
+	overflow:scroll;
+
+	padding:0.5em;
+	border-radius:0.5em;
+	background-color:var(--color-scrolding);
 	outline:none;
-	/* nodig voor telefoons */
-	appearance:none;
-	transition:.1s;
 }
-  
-main a:focus-visible {
-	transform:translatey(-.5em);
-	box-shadow:0 .1em var(--link-focus), 
-	inset 0 0 var(--link-focus); 
+
+/*** states - blokje ***/
+
+/* hover - blokje */
+body > a:hover {
+	background-color:var(--button-kleur);
+}
+
+/* focus - blokje */
+body > a:focus {
+	background-color:var(--button-kleur);
+}
+/* active - blokje */
+body > a:active {
+	background-color:var(--button-kleur);
 }
 
 /* header */
@@ -92,6 +107,12 @@ header button img {
 	height:1em;
 }
 
+header a {
+	outline-color:var(--active-text);
+	position:relative;
+	transition:color .5s;
+}
+
 header ul {
 	list-style:none;
 	justify-self:end;
@@ -102,7 +123,7 @@ header li {
 	padding-bottom:1em;
 }
 
-/* media query - header */ 
+/*** media query - header ***/ 
 @media (min-width:85em) {
 
 	header {
@@ -154,7 +175,6 @@ header nav a {
 	text-decoration:none;
 	font-weight:600;
 
-	/* states settings */
 	outline:none;
 	position:relative;
 	transition:color .5s;
@@ -172,7 +192,26 @@ header nav.open li:nth-of-type(10) {
     display:none;
 }
 
-/* states - nav */
+/* div */ 
+header div {
+	position:fixed;
+	inset:0;
+	background-color:var(--shaduw-nav);
+	opacity:0;
+	/* De div luistert niet naar de kliks dus je kunt er nu wel met dit erbij op klikken op de menu knop */
+	pointer-events:none;
+	transition:.5s;
+}
+
+header div.open {
+	opacity:1; 
+  	/* Er mag weer op geklikt worden */
+	pointer-events:all;
+}
+
+/*** states - nav ***/
+
+/* hover - nav */
 header nav a::after {
 	content:"";
 	position:absolute;
@@ -198,12 +237,18 @@ header nav a:is(:hover, :focus-visible)::after {
 	/* wordt de ::after helemaal breed vanaf links in het midden */
 	transform-origin:left center;
 }
-  
+
+/* focus - nav */
+header nav a:focus {
+	color:var(--active-color);
+}
+
+/* active - nav */
 header nav a:active {
 	color:var(--active-color);
 }
 
-/* media query - nav */ 
+/*** media query - nav ***/ 
 @media (min-width:85em) {
 
 	header nav {
@@ -211,7 +256,6 @@ header nav a:active {
 		background-color:transparent;
 		transform:translateX(0);
 		padding-top:1em;
-		padding-left:14em;
 		padding-bottom:0em;
 	}
 
@@ -224,12 +268,16 @@ header nav a:active {
 	}
 
 	header ul {
-		display:-webkit-box;
-		gap: 2em;
+		display:flex;
+		flex-wrap:wrap;
+		gap:2em;
 		list-style:none;
 
 		margin-top:0.1em;
-    	padding-right:10em;
+    	margin-left:26em;
+
+		justify-self:unset;
+		text-align:unset;
 	}
 
 	header nav ul li:nth-of-type(8), header nav ul li:nth-of-type(9), header nav ul li:nth-of-type(10) {
@@ -243,44 +291,11 @@ header nav a:active {
 	}
 
 	header img {
+		/* margin-left:9em; */
 		width:100%;
 		max-width:19em;
 	}
 }
-
-/* div */ 
-header div {
-	position:fixed;
-	inset:0;
-	background-color:var(--shaduw-nav);
-	opacity:0;
-	/* De div luistert niet naar de kliks dus je kunt er nu wel met dit erbij op klikken op de menu knop */
-	pointer-events:none;
-	transition:.5s;
-}
-
-header div.open {
-	opacity:1; 
-  	/* Er mag weer op geklikt worden */
-	pointer-events:all;
-}
-
-/* body */
-body > a {
-	position:fixed;
-	right:3em;
-	bottom:3em;
-	overflow:scroll;
-
-	padding:0.5em;
-	border-radius:0.5em;
-	background-color:var(--color-scrolding);
-}
-
-body > a:hover {
-	background-color:var(--button-kleur);
-}
-
 
 /* h1 & h2 */
 h1 {
@@ -321,6 +336,7 @@ footer section {
 	padding-right:4em;
 }
 
+/* navigatie van alle linkjes */
 footer > nav ul {
 	display:flex;
 	list-style:none;
@@ -338,17 +354,6 @@ footer nav  ul li {
 	padding-bottom:1em;
 }
 
-footer nav ul li:hover {
-	transform:scale(1.1); 
-	-ms-transform:scale(1.1); /* IE 9 */
-	-webkit-transform:scale(1.1); /* Safari 3-8 */
-}
-
-footer img {
-		width:100%;
-		max-width:2em;
-}
-
 footer p {
 	color:var(--color-footer);
 	text-align:center;
@@ -357,17 +362,33 @@ footer p {
 footer a {
 	color:var(--color-footer);
 	text-decoration:none;
+	outline:none;
+}
+
+/*** states - navigatie ***/ 
+
+/* hover - navigatie footer */
+footer nav ul li:hover {
+	transform:scale(1.1); 
+	-ms-transform:scale(1.1); /* IE 9 */
+	-webkit-transform:scale(1.1); /* Safari 3-8 */
 }
 
 footer a:hover {
 	color:var(--button-kleur);
 }
 
-footer a:focus {
-	outline:none;
-	color:var(--button-kleur);
+/* focus - navigatie footer */
+footer nav ul li a:focus  {
+	color:var(--focus-color);
 }
 
+/* active - navigatie footer */
+footer nav ul li a:active  {
+	color:var(--focus-color);
+}
+
+/* button mail verzenden */
 footer button {
 	background-color:var(--button-kleur);
 	padding:1em;
@@ -378,15 +399,35 @@ footer button {
 	text-transform:uppercase;
 	font-weight:bold;
 	border:none;
+	outline:none;
 }
 
+/*** states - button mail verzenden  ***/
+
+/* hover - button */
 footer button:hover {
 	-ms-transform:scale(1.1); /* IE 9 */
 	-webkit-transform:scale(1.1); /* Safari 3-8 */
 	transform:scale(1.1); 
 }
 
-/* media query - footer */ 
+/* focus - button */
+footer button:focus {
+	background-color:var(--active-color);
+}
+
+/* active - button  */
+footer button:hover {
+	background-color:var(--active-color);
+}
+
+/* foto van social buttons */
+footer img {
+	width:100%;
+	max-width:2em;
+}
+
+/*** media query - footer ***/ 
 @media (max-width:45em) {
 
 	footer section {
@@ -428,5 +469,6 @@ footer button:hover {
 
 	footer input[type="text"] {
 		padding:1em;
+		outline-color:var(--focus-a);
 	}
 }

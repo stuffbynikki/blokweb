@@ -1,14 +1,16 @@
 /* root */
 :root {
 	--background-color-article:rgb(237,237,237);
-	--categorieen-color:rgb(158, 56, 138);
+	--categorieen-color:rgb(158,56,138);
 	--background-blok2:rgb(158,22,131);
 	--background-color-button:rgb(255,73,220);
-	--text-color-button:rgb(255	255	255);
-	--text-p:rgb(105, 104, 104);
+	--text-color-button:rgb(255,255,255);
+	--text-p:rgb(105,104,104);
 	--kleur-invoerveld:rgb(235,238,239);
-	--categorie-stipje:rgb(87, 87, 87);
-	--text-h1-section2:rgb(255	255	255);
+	--categorie-stipje:rgb(87,87,87);
+	--text-h1-section2:rgb(255,255,255);
+	--visited-color:rgb(225,24,191);
+	--focus-a:rgb(0,0,0);
 }
 
 /* main */ 
@@ -22,15 +24,15 @@ main {
 	padding:0em;
 }
 
-/* hele lijst articles & twee navs */
+/************* eerste section *************/ 
+/* alle articles & nav's */ 
 main section:nth-of-type(1) {
 	display:grid;
 	gap:1.5em;
 	padding:1em;
 }
 
-/* articles */ 
-/* Blogberichten kaders */ 
+/* blogberichten kaders */ 
 main section:nth-of-type(1) article {
 	display:flex;
 	flex-direction:column;
@@ -101,6 +103,32 @@ main section:nth-of-type(1) nav:nth-of-type(1) h2 {
 	font-size:1.5em;
 }
 
+/*** states - button ***/ 
+
+/* hover - button */
+main section:nth-of-type(1) article a:hover {
+	transform:scale(1.1); 
+	-ms-transform:scale(1.1); /* IE 9 */
+	-webkit-transform:scale(1.1); /* Safari 3-8 */
+}
+
+/* focus - button */
+main section:nth-of-type(1) article a:focus {
+    outline:none;
+    appearance:none;
+    transition:.1s;
+	transform:scale(1.1); 
+    background-color:var(--focus-a);
+}
+
+/* active - button */
+main section:nth-of-type(1) article a:active {
+	transform:scale(1.1); 
+	-ms-transform:scale(1.1); /* IE 9 */
+	-webkit-transform:scale(1.1); /* Safari 3-8 */
+	background-color:var(--focus-a);
+}
+
 /* zoekbalk */
 main section:nth-of-type(1) nav:nth-of-type(1) form {
 	display:initial;
@@ -111,10 +139,11 @@ main section:nth-of-type(1) nav:nth-of-type(1) form {
 
 main section:nth-of-type(1) nav:nth-of-type(1) form button {
 	position:absolute;
-	right:1em;
+	right:1.5em;
 	top:50%;
 	transform:translateY(-50%);
 	border:none;
+	outline-color:var(--focus-a);
 }
 
 main section:nth-of-type(1) nav:nth-of-type(1) input[type="search"] {
@@ -123,21 +152,47 @@ main section:nth-of-type(1) nav:nth-of-type(1) input[type="search"] {
 	width:100%;
 	border:0.1em solid black;
 	border-radius:20em;
+	outline-color:var(--focus-a);
 }
 
-/* filter van categorieën */ 
 main section:nth-of-type(1) nav:nth-of-type(1) ul {
-	padding-left:1em;
+	padding-left:0em;
 }
 
 main section:nth-of-type(1) nav:nth-of-type(1) ul li {
 	color:var(--categorieen-color);
 	font-family:"Roboto regular", Arial, Helvetica, sans-serif;
 	margin-bottom:1em;
+	margin-left:0em;
+	list-style:none;
 }
 
-main section:nth-of-type(1) nav:nth-of-type(1) ul li::marker {
-	color:var(--categorie-stipje);
+main section:nth-of-type(1) nav:nth-of-type(1) ul li a {
+	color:var(--categorieen-color);
+	text-decoration:none;
+
+	outline:none;
+    appearance:none;
+    transition:.1s;
+}
+
+/*** states - categorie ***/ 
+
+/* hover - categorie */
+main section:nth-of-type(1) nav:nth-of-type(1) li a:hover {
+	color:var(--focus-a);
+	font-weight:800;
+}
+
+/* focus - categorie */
+main section:nth-of-type(1) nav:nth-of-type(1) li a:focus {
+	color:var(--focus-a);
+	font-weight:800;
+}
+
+/* active - categorie */
+main section:nth-of-type(1) nav:nth-of-type(1) li a:active {
+	color:var(--focus-a);
 }
 
 /* paginering */
@@ -157,6 +212,9 @@ main section:nth-of-type(1) nav:nth-of-type(2) ul {
 main section:nth-of-type(1) nav:nth-of-type(2) ul a {
  	color:var(--categorieen-color);
  	text-decoration:none;
+	outline:none;
+	appearance:none;
+	transition:.1s;
 }
 
 main section:nth-of-type(1) nav:nth-of-type(2) ul a:first-of-type {
@@ -164,23 +222,26 @@ main section:nth-of-type(1) nav:nth-of-type(2) ul a:first-of-type {
 	text-decoration:none;
 }
 
-/* states - articles */ 
-/* states van de button */
-main section:nth-of-type(1) article a:hover {
-	transform:scale(1.1); 
-	-ms-transform:scale(1.1); /* IE 9 */
-	-webkit-transform:scale(1.1); /* Safari 3-8 */
+/*** states - paginanummer ***/ 
+
+/* hover - paginanummer */
+main section:nth-of-type(1) nav:nth-of-type(2) ul a:hover {
+	color:var(--focus-a);
+	font-weight:800;
 }
 
-/* states van de categorieën */
-main section:nth-of-type(1) nav:nth-of-type(1) li:hover {
-	color:var(--background-color-button);
-	transform:scale(1.1); 
-	-ms-transform:scale(1.1); /* IE 9 */
-	-webkit-transform:scale(1.1); /* Safari 3-8 */
+/* focus - paginanummer */
+main section:nth-of-type(1) nav:nth-of-type(2) ul a:focus {
+	color:var(--focus-a);
+	font-weight:800;
 }
 
-/* media query - section 1 */ 
+/* active - paginanummer */
+main section:nth-of-type(1) nav:nth-of-type(2) li a:active {
+	color:var(--focus-a);
+}
+
+/*** media query - section 1 ***/ 
 @media (min-width:50em) {
 	main section:nth-of-type(1) {
 		grid-template-columns:1fr 1fr ;
@@ -221,7 +282,7 @@ main section:nth-of-type(2) article {
 	border-radius:0em;
 }		
 
-/* media query - section 2 */
+/*** media query - section 2 ***/
 @media (max-width:50em) {
 	main section:nth-of-type(2) section {
 		display:grid; 
